@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
- <h1> Home some more text</h1>
+ <h1> Home some stuff has changed test</h1>
 </template>
 
 <style scoped>
