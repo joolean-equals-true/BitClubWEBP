@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(26, 26, 26);
+}
+
+
+h1, h2, h3{
+  color:azure;
+}
+
+
+button {
+  border-radius: 3em;
+  background-color: rgb(65, 65, 65)
+}
