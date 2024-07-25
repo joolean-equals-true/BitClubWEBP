@@ -1,3 +1,15 @@
+
+
+/*Font Stylings-----------------------------*/
+.rubik-font {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/*Body Styling*/
 body{
   background-color: rgb(26, 26, 26);
 }
@@ -5,6 +17,15 @@ body{
 
 h1, h2, h3{
   color:azure;
+  
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
 }
 
 
@@ -12,3 +33,15 @@ button {
   border-radius: 3em;
   background-color: rgb(65, 65, 65)
 }
+
+/*Speacial Classes--------------*/
+
+/*Navbar class. just a class for the navbar. don't expect me to make to many more comments like this...*/
+.navbar {
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+

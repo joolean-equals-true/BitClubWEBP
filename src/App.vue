@@ -1,9 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
- <h1> Home some stuff has changed test</h1>
+  <ul class = "navbar">
+  
+    <li><h2>Home</h2></li>
+    <li><h2>Officers</h2></li>
+    <li><h2>Events</h2></li>
+    <li><h2>Ranklists</h2></li>
+    <li><h2>Merch</h2></li>
+  </ul>
+ <h1 class = "rubik-font"> Home some stuff has changed test</h1>
 </template>
 
 <style scoped>
