@@ -1,5 +1,5 @@
 <script setup>
-
+const bitclublogo = "/BITClubLogo.png"
 </script>
 
 <template>
@@ -11,7 +11,7 @@
     <li><h2>Ranklists</h2></li>
     <li><h2>Merch</h2></li>
   </ul>
- <h1 class = "rubik-font"> Home some stuff has changed test</h1>
+  <img :src = bitclublogo class = "overlap" id = "bitclublogo">
 </template>
 
 <style scoped>

@@ -11,7 +11,7 @@ const count = ref(0)
 <template>
 <div> 
   <h1> 
-    
+    Next Event:
   </h1>
 </div>
 </template>
