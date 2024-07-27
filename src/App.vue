@@ -1,5 +1,8 @@
 <script setup>
-const bitclublogo = "/BITClubLogo.png"
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 </script>
 
 <template>
@@ -11,7 +14,9 @@ const bitclublogo = "/BITClubLogo.png"
     <li><h2>Ranklists</h2></li>
     <li><h2>Merch</h2></li>
   </ul>
-  <img :src = bitclublogo class = "overlap" id = "bitclublogo">
+  <router-view/>
+
+  
 </template>
 
 <style scoped>
