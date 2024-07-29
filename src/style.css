@@ -69,9 +69,17 @@ would rather make a class that has that specification. This will just update the
   z-index: 1;
 }
 
+/*This class is just meant to just center elements. */
 .center{
   margin-left: auto;
   margin-right:auto;
+}
+
+
+/*Container Classes*/
+.dark-grey-banner{
+  background-color: rgb(87, 87, 87);
+  width:fit-content;
 }
 
 /*ID's---------------------------------*/
@@ -80,11 +88,10 @@ would rather make a class that has that specification. This will just update the
 I should note that it takes it's height from the navbar. there is a better way to do this. */
 #bitclublogo{
   font-size: 50px;
-  width: 30%;
+  width: 37%;
   height: 20%;
-  border-bottom-left-radius: 20px;
+  left: 31.5%;
   position: absolute;
-  left: 36%;
   top: 20%
 
 }

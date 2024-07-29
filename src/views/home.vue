@@ -9,8 +9,11 @@ const count = ref(0)
 </script>
 
 <template>
-  <img id = "bitclublogo" :src = logo>
-<div> 
+  <div>
+    <img id = "bitclublogo" :src = logo>
+  </div>
+  
+<div class = "dark-grey-banner"> 
   <h1> 
     Next Event:
   </h1>
