@@ -77,9 +77,22 @@ would rather make a class that has that specification. This will just update the
 
 
 /*Container Classes*/
-.dark-grey-banner{
+
+.light-grey-banner{
   background-color: rgb(87, 87, 87);
-  width:fit-content;
+  width:300px;
+  padding: 1px;
+  position:absolute;
+  left: -3%;
+  display: flex;
+  justify-content:center;
+  transform: skew(-40deg);
+ 
+}
+
+.light-grey-banner h1{
+  transform: skew(40deg);
+  margin: 10px;
 }
 
 /*ID's---------------------------------*/

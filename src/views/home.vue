@@ -12,12 +12,13 @@ const count = ref(0)
   <div>
     <img id = "bitclublogo" :src = logo>
   </div>
-  
-<div class = "dark-grey-banner"> 
-  <h1> 
+
+  <ul class = "light-grey-banner"> 
+    <h1 > 
     Next Event:
   </h1>
-</div>
+</ul>
+
 </template>
 
 <style scoped>
