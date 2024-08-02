@@ -1,10 +1,30 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/*
+Color Pallette:
+rgb(26, 26, 26);
+rgb(53, 53, 53);
+rgb(87, 87, 87);
+rgb(0, 100, 0);
+the class below helps to visualize this. other than that it has no purpose
+*/
+.color-pallette{
+  background-color: rgb(26, 26, 26);
+  background-color: rgb(53, 53, 53);
+  background-color: rgb(87, 87, 87);
+  background-color: rgb(0, 255, 0);
+}
 /*Font Stylings-----------------------------*/
 .rubik-font {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  font-style: normal;
+}
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -37,6 +57,10 @@ button {
 
 /*Speacial Classes--------------*/
 
+/*class green: this changes the color of an element's text to green.*/
+.green-header{
+  color: rgb(0, 255, 0);
+}
 /*Navbar class. just a class for the navbar. don't expect me to make to many more comments like this...*/
 .navbar {
   background-color: rgb(53, 53, 53);
@@ -77,8 +101,10 @@ would rather make a class that has that specification. This will just update the
 
 
 /*Container Classes*/
-
-.light-grey-banner{
+/*slanted light-grey banner: this banner is slanted and is meant to contain some text. since I don't know
+how to skew a shape without transfroming the entire object, it is meant to hang onto the edge of the screen.
+You can change the height though! the "child" class here is needed to unskew the text.*/
+.slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
   width:300px;
   padding: 1px;
@@ -90,7 +116,7 @@ would rather make a class that has that specification. This will just update the
  
 }
 
-.light-grey-banner h1{
+.slanted-light-grey-banner h1{
   transform: skew(40deg);
   margin: 10px;
 }
@@ -106,5 +132,23 @@ I should note that it takes it's height from the navbar. there is a better way t
   left: 31.5%;
   position: absolute;
   top: 20%
-
 }
+
+/*promoImg: this is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
+"scrolling" effect.
+all images need to be the same width and height before they are combined. These dimesnions are 
+880 x 664 pixels. Even after this they are scaled down by 0.5. not gonna fix what ain't broke. */
+#promoImg{
+transform: scale(0.5) translate(-35%, -30%);
+border-top-right-radius: 60px;
+border-top-left-radius: 60px;
+}
+
+
+
+#promoHeaderHomePage{
+  transform:  translate(5%, 65%);
+  font-size: 70px;
+  width: 600px;
+}
+

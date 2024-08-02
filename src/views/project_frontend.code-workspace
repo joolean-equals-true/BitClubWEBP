@@ -1,11 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../.."
-		},
-		{
-			"path": "../../../../../htdocs/todoapp/todo-frontend-vue3-Julian/vite-project"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "../.."
+        }
+    ]
 }
