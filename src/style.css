@@ -1,6 +1,10 @@
+/*Todo:
+At some point, you will need to make different font sizes and widths for different screens. you can look at the bitclub website to see how. 
 
+make the box of the image have a neon green outline. It'll be easier to see when the image transitions.*/
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /*
 Color Pallette:
 rgb(26, 26, 26);
@@ -14,17 +18,24 @@ the class below helps to visualize this. other than that it has no purpose
   background-color: rgb(53, 53, 53);
   background-color: rgb(87, 87, 87);
   background-color: rgb(0, 255, 0);
+  background-color: azure;
 }
 /*Font Stylings-----------------------------*/
 .rubik-font {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
 }
 .audiowide-regular {
   font-family: "Audiowide", sans-serif;
   font-weight: 500;
+  font-style: normal;
+}
+.orbitron-font {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500px;
   font-style: normal;
 }
 
@@ -43,16 +54,29 @@ h1, h2, h3{
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  display: block;
+  text-align: center;
 }
 
 li {
   list-style: none;
 }
 
-
+p{
+  margin: 18px;
+  display: block;
+}
 button {
   border-radius: 3em;
-  background-color: rgb(65, 65, 65)
+  background-color: rgb(65, 65, 65);
+  color: azure;
+  font-size: 30px;
+  padding: 10px;
+  border-style: none;
+}
+
+img{
+  height: auto;
 }
 
 /*Speacial Classes--------------*/
@@ -98,6 +122,11 @@ would rather make a class that has that specification. This will just update the
   margin-left: auto;
   margin-right:auto;
 }
+/*this class is meant to center the content inside an element*/
+.center-content{
+  display: flex;
+  justify-content:center;
+}
 
 
 /*Container Classes*/
@@ -106,8 +135,9 @@ how to skew a shape without transfroming the entire object, it is meant to hang 
 You can change the height though! the "child" class here is needed to unskew the text.*/
 .slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
-  width:300px;
-  padding: 1px;
+  width:auto;
+  padding-right: 50px;
+  padding-left: 50px;
   position:absolute;
   left: -3%;
   display: flex;
@@ -121,34 +151,53 @@ You can change the height though! the "child" class here is needed to unskew the
   margin: 10px;
 }
 
+/*yeah I copied your code. what are you gonna do about it?*/
+.image-container{
+  text-align: center;
+}
+
+
+
 /*ID's---------------------------------*/
 
 /*Bitclub logo ID: this id exists becuase I need to specifically change the bitclub logo, and nothing else needs this styling.
-I should note that it takes it's height from the navbar. there is a better way to do this. */
+it has a max width and is meant to be put in an "image container" */
 #bitclublogo{
-  font-size: 50px;
-  width: 37%;
-  height: 20%;
-  left: 31.5%;
-  position: absolute;
-  top: 20%
+  max-width: 40%;
+
 }
 
-/*promoImg: this is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
+/*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
 "scrolling" effect.
 all images need to be the same width and height before they are combined. These dimesnions are 
 880 x 664 pixels. Even after this they are scaled down by 0.5. not gonna fix what ain't broke. */
-#promoImg{
-transform: scale(0.5) translate(-35%, -30%);
-border-top-right-radius: 60px;
-border-top-left-radius: 60px;
+#eventImg{
+  max-width: 40%;
+  border-radius: 30px;
+
 }
 
 
 
-#promoHeaderHomePage{
-  transform:  translate(5%, 65%);
-  font-size: 70px;
-  width: 600px;
+#nextEventHeader{
+  font-size: 80px;
+  text-shadow: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+#newsImgContainer{
+  position: absolute;
+  left: 0px;
+  top: 370px;
+  display: flex;
+  justify-content: left;
+}
+
+#newsImg{
+  max-width: 50%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 

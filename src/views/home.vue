@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from 'vue'
+const newsImg = "/public/newsImages/aiRatBrain.jpg"
+const eventImg = "/public/lanPartyBanner.png"
 const logo = "/public/BITClubLogoTransparent.png"
+
+
 const promoImg = "/public/LIandLeftwhich.jpg"
 defineProps({
   msg: String,
@@ -10,20 +14,36 @@ const count = ref(0)
 </script>
 
 <template>
-  <div>
+<p class = "image-container">
     <img id = "bitclublogo" :src = logo>
-  </div>
+  </p>
 
 <ul class = "slanted-light-grey-banner"> 
   <h1> 
-    Next Event:
+    News:
   </h1>
 </ul>
 
-<h1 id ="promoHeaderHomePage" class = "green-header audiowide-regular"> 
-  Kickoff
+<h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
+  Next Event
 </h1>
-  <img id = "promoImg" :src = promoImg>
+
+<p class = "image-container">
+    <img id = "eventImg" :src = eventImg>
+</p>
+
+<div class = "center-content"> 
+  <button class = "rubik-font"> 
+  Register
+</button>
+</div>
+
+<p id = "newsImgContainer" class = "image-container">
+  <img id = "newsImg" :src = newsImg>
+</p>
+
+
+
 
 </template>
 
