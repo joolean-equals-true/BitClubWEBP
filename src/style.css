@@ -13,6 +13,22 @@ rgb(87, 87, 87);
 rgb(0, 100, 0);
 the class below helps to visualize this. other than that it has no purpose
 */
+
+/*Animations and Key Frames----------------------------*/
+@keyframes navbarHover{
+  from{
+    background-color: rgb(53, 53, 53);
+  }
+  to{
+    background-color: rgb(87, 87, 87);
+  }
+}
+
+
+
+
+
+
 .color-pallette{
   background-color: rgb(26, 26, 26);
   background-color: rgb(53, 53, 53);
@@ -41,6 +57,10 @@ the class below helps to visualize this. other than that it has no purpose
 
 
 /*Body Styling*/
+html, body{
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body{
   margin: 0px;
   background-color: rgb(26, 26, 26);
@@ -63,9 +83,12 @@ li {
 }
 
 p{
+  color: azure;
   margin: 18px;
   display: block;
+  padding: 12px;
 }
+
 button {
   border-radius: 3em;
   background-color: rgb(65, 65, 65);
@@ -77,6 +100,9 @@ button {
 
 img{
   height: auto;
+}
+a{
+  text-decoration: none;
 }
 
 /*Speacial Classes--------------*/
@@ -104,9 +130,21 @@ img{
 }
 
 .navbar li{
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  transition-duration: 0.5s;
 }
+.navbar h2{
+  text-decoration: none;
+}
+.navbar li:hover{
+  
+  animation-name: navbarHover;
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  background-color: rgb(87, 87, 87);
+}
+
 
 
 
@@ -133,7 +171,7 @@ would rather make a class that has that specification. This will just update the
 /*slanted light-grey banner: this banner is slanted and is meant to contain some text. since I don't know
 how to skew a shape without transfroming the entire object, it is meant to hang onto the edge of the screen.
 You can change the height though! the "child" class here is needed to unskew the text.*/
-.slanted-light-grey-banner{
+.left-slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
   width:auto;
   padding-right: 50px;
@@ -145,9 +183,25 @@ You can change the height though! the "child" class here is needed to unskew the
   transform: skew(-40deg);
  
 }
-
-.slanted-light-grey-banner h1{
+.right-slanted-light-grey-banner{
+  background-color: rgb(87, 87, 87);
+  width:auto;
+  padding-right: 50px;
+  padding-left: 50px;
+  position:absolute;
+  right: -3%;
+  display: flex;
+  justify-content:center;
   transform: skew(40deg);
+ 
+}
+
+.left-slanted-light-grey-banner h1{
+  transform: skew(40deg);
+  margin: 10px;
+}
+.right-slanted-light-grey-banner h1{
+  transform: skew(-40deg);
   margin: 10px;
 }
 
@@ -155,9 +209,27 @@ You can change the height though! the "child" class here is needed to unskew the
 .image-container{
   text-align: center;
 }
+/*this is meant for div that has an image an a paragaph inside it. It makes it way easier to align.*/
+.image-paragraph-container{
+  display: flexbox;
+  margin: 30px;
+}
 
+.description-box{
+  margin:0px;
+  display: flex;
+  height: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(87, 87, 87);
+}
 
-
+.about-image{
+  max-width: 30%;
+  border-radius: 30px;
+}
 /*ID's---------------------------------*/
 
 /*Bitclub logo ID: this id exists becuase I need to specifically change the bitclub logo, and nothing else needs this styling.
@@ -174,7 +246,6 @@ all images need to be the same width and height before they are combined. These 
 #eventImg{
   max-width: 40%;
   border-radius: 30px;
-
 }
 
 
@@ -188,16 +259,54 @@ all images need to be the same width and height before they are combined. These 
 
 
 #newsImgContainer{
-  position: absolute;
-  left: 0px;
-  top: 370px;
-  display: flex;
+  margin: 0px;
+  padding: 0px;
   justify-content: left;
+}
+#newsDescription{
+  width: 319px;
 }
 
 #newsImg{
-  max-width: 50%;
+  width: 343px;/*perfect width for this image.*/
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+/*this div contains the paragraph and image for the news on the home page. Since everything flows centered, I needed
+to reposition it in the right place.*/
+#newsDiv{
+  display: flexbox;
+  justify-content: left;
+  position: absolute;
+  left: 0px;
+  top: 390px;
+}
+#quoteDiv{
+  display: flexbox;
+  justify-content: right;
+  position: absolute;
+  right: 0px;
+  top:390px;
+}
+
+#quoteImg{
+  width: 343px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+#quoteImgContainer{
+  margin: 0px;
+  padding: 0px;
+  justify-content: right;
+}
+#quoteDescription{
+  width: 319px;
+}
+
+#aboutHeader{
+  font-size: 80px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
