@@ -25,7 +25,7 @@ const lanpartyPhoto = "/public/aboutImages/lanpartyPhoto.jpg"
     <img class = "about-image" :src = departmentday>
 </p>
 
-<p id= "about-description"class = "black-paragraph rubik-font center">
+<p id= "about-description"class = "transparent-paragraph orbitron-font center">
 Bit Club is the official ACM (Math and Computer Science) chapter for OC, but everyone at OC is welcome!
 
 <br>

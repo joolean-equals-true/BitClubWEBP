@@ -24,6 +24,15 @@ the class below helps to visualize this. other than that it has no purpose
   }
 }
 
+@keyframes officerNavBarHover{
+  from{
+    background-color: rgba(0, 0, 0, 0.164);
+  }
+  to{
+    background-color: rgba(109, 109, 109, 0.5);
+  }
+}
+
 
 
 
@@ -231,13 +240,61 @@ You can change the height though! the "child" class here is needed to unskew the
   max-width: 25%;
   border-radius: 30px;
 }
+.officer-image{
+  max-width: 20%;
+  border-radius: 30px;
+}
 
-.black-paragraph{
+.transparent-paragraph{
   border-radius: 30px;
   border-color: azure;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   border-style:solid;
-  border-width: 1px;
+  border-width: 2px;
+}
+
+.officer-label{
+  font-size: 40px;
+  width:fit-content;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.officer-description{
+  width: 48%;
+  font-size: 20px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.officer-navbar{
+  padding:0px;
+  margin: 0px;
+  position:fixed;
+  left:0px;
+  top: 300px;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: 20px;
+  width: auto;
+  
+
+}
+
+.officer-navbar h3{
+  margin:0px;
+  
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    transition-duration: 0.5s;
+}
+
+.officer-navbar h3:hover{
+  animation-name: officerNavBarHover;
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  background-color: rgba(109, 109, 109, 0.5);
 }
 /*ID's---------------------------------*/
 
@@ -313,6 +370,8 @@ to reposition it in the right place.*/
   width: 319px;
 }
 
+
+/*About Page tags-----------------------------*/
 #aboutHeader{
   font-size: 80px;
   margin-top:200px;
@@ -355,10 +414,44 @@ to reposition it in the right place.*/
   height: auto;
   padding: 10px;
   max-width: 40%;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/*Officer Page tags*/
+#officer-header{
+  font-size: 90px;
 }
 
 
-#officer-header{
-  font-size: 90px;
+
+#president-image{
+}
+
+/*I needed to make these since some of the descriptions written are longer than others.*/
+#president-description{
+  width: 70%;
+}
+
+#secretary{
+  
+}
+#secretary-description{
+  width: 90%;
+}
+
+#chaplain-description{
+  width: 70%;
+}
+#social-media-manager-description{
+  width: 70%;
+}
+
+#number1{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#number5{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
