@@ -2,19 +2,45 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const officerPhoto = "/public/aboutImages/officerPhoto.HEIC"
+const liandlefty = "/public/aboutImages/LiandLeftwich.jpg"
+const departmentday = "/public/aboutImages/departmentday.jpg"
+const officerPhoto = "/public/aboutImages/officerPhoto.png"
 const lanpartyPhoto = "/public/aboutImages/lanpartyPhoto.jpg"
+
 </script>
 
 <template>
 <h1 id = "aboutHeader"class = "green-header orbitron-font">Who we Are</h1>
 
-<p class="image-container">
+<p id ="top-right-about-image" class="image-container">
     <img class = "about-image" :src = officerPhoto>
 </p>
-<p class = "image-container">
+<p id = "top-left-about-image" class = "image-container">
     <img class = "about-image":src = lanpartyPhoto>
 </p>
+<p id = "bottom-left-about-image" class = "image-container">
+    <img class = "about-image":src = liandlefty>
+</p>
+<p  id = "bottom-right-about-image" class = "image-container">
+    <img class = "about-image" :src = departmentday>
+</p>
+
+<p id= "about-description"class = "black-paragraph rubik-font center">
+Bit Club is the official ACM (Math and Computer Science) chapter for OC, but everyone at OC is welcome!
+
+<br>
+We meet Tuesdays in HSH 208.
+
+<br>
+Some weeks we will have guest speakers to show you something new and interesting. Other weeks we hangout and play board games and video games.
+
+<br>
+We can also help with computer science homework and answer related questions if needed.
+
+<br>
+We have other fun events and several yearly events in addition to our weekly meetings.
+</p>
+
 </template>
 
 <style scoped>

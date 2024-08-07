@@ -208,6 +208,7 @@ You can change the height though! the "child" class here is needed to unskew the
 /*yeah I copied your code. what are you gonna do about it?*/
 .image-container{
   text-align: center;
+  
 }
 /*this is meant for div that has an image an a paragaph inside it. It makes it way easier to align.*/
 .image-paragraph-container{
@@ -227,8 +228,16 @@ You can change the height though! the "child" class here is needed to unskew the
 }
 
 .about-image{
-  max-width: 30%;
+  max-width: 25%;
   border-radius: 30px;
+}
+
+.black-paragraph{
+  border-radius: 30px;
+  border-color: azure;
+  background-color: black;
+  border-style:solid;
+  border-width: 1px;
 }
 /*ID's---------------------------------*/
 
@@ -306,7 +315,50 @@ to reposition it in the right place.*/
 
 #aboutHeader{
   font-size: 80px;
-  margin-top: 80px;
+  margin-top:200px;
   margin-bottom: 20px;
 }
 
+#top-right-about-image{
+  display: flex;
+  position: absolute;
+  justify-content: right;
+  right: 0px;
+  top: 85px;
+}
+
+#top-left-about-image{
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 85px;
+  justify-content: left;
+}
+#bottom-left-about-image{
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 450px;
+  justify-content: left;
+}
+#bottom-right-about-image{
+  display: flex;
+  position: absolute;
+  justify-content: right;
+  right: 0px;
+  top: 470px;
+}
+
+#about-description{
+  display: flex;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  max-width: 40%;
+  font-size: 20px;
+}
+
+
+#officer-header{
+  font-size: 90px;
+}
