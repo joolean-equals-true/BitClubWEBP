@@ -39,7 +39,7 @@ the class below helps to visualize this. other than that it has no purpose
     font-size: 30px;
   }
   to{
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
@@ -331,11 +331,7 @@ page right now. */
   transition: 0.5s;
 }
 
-.event-button button:hover{
-  animation-name: enlarge-button;
-  animation-direction: alternate-reverse;
-  animation-duration: 0.5s;
-}
+
 
 
 
@@ -540,4 +536,11 @@ to reposition it in the right place.*/
  display: flex;
  flex-direction:column;
  padding: 0px;
+}
+
+#event-list :hover{
+  animation-name: enlarge-button;
+  animation-direction:normal;
+  animation-duration: 0.5s;
+  font-size: 40px;
 }
