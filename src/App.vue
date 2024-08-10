@@ -14,7 +14,7 @@ const router = useRouter();
     <li>
       <router-link :to ="{name: 'officers'}"><h2>Officers</h2></router-link>
     </li>
-    <li><h2>Events</h2></li>
+    <li><router-link :to = "{name: 'events'}"><h2>Events</h2></router-link></li>
     <li>
       <router-link :to ="{name: 'about'}"><h2>About</h2></router-link>
     </li>

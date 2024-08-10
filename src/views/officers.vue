@@ -6,9 +6,9 @@ const secretaryPhoto = "public/officerImages/arri.png"
 const chaplainPhoto = "public/officerImages/matthew.png"
 const socialmediaManagerPhoto = "public/officerImages/emily.png"
 
-function scrollIntoViewCall(){
+function scrollIntoViewCall(targetElement){
    
-    var target = document.getElementById("secretary");
+    var target = document.getElementById(targetElement);
     target.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -16,30 +16,35 @@ function scrollIntoViewCall(){
     })
 }
 
+
 </script>
 
 <template>
 
     <ul class = "officer-navbar">
-        <h3 id = "number1" @click = "scrollIntoViewCall()">
+        <h3 id = "number1"@click = "scrollIntoViewCall('president-label')">
                   1
         </h3>
-        <h3>
+        <h3  @click = "scrollIntoViewCall('vp-label')">
             2
         </h3>
-        <h3>
+        <h3 @click = "scrollIntoViewCall('secretary-label')">
             3
         </h3>
-        <h3>
+        <h3 @click = "scrollIntoViewCall('chaplain-label')">
             4
         </h3>
-        <h3 id = "number5">
+        <h3 id= "number5"@click = "scrollIntoViewCall('social-media-manager-label')">
             5
         </h3>
     </ul>
+
+
     <h1 id = "officer-header" class = "green-header orbitron-font">
         Meet Our Team
     </h1>
+
+
     <h2 id = "president-label"class = "officer-label transparent-paragraph center orbitron-font">
         President: Jenna Stilling
     </h2>
@@ -67,7 +72,7 @@ function scrollIntoViewCall(){
     </p>
 
 
-    <h2 id = ""class = "officer-label transparent-paragraph center orbitron-font">
+    <h2 id = "vp-label"class = "officer-label transparent-paragraph center orbitron-font">
         Vice President: Julian Moore
     </h2>
     <p class = "image-container">
@@ -95,7 +100,7 @@ function scrollIntoViewCall(){
 
 
 
-    <h2 id = ""class = "officer-label transparent-paragraph center orbitron-font">
+    <h2 id = "secretary-label"class = "officer-label transparent-paragraph center orbitron-font">
         Secretary: Arrian Naiomi Taton
     </h2>
     <p class = "image-container">
@@ -121,7 +126,7 @@ function scrollIntoViewCall(){
         Ari is accomplished and capable- in addition to her two officer positions at BITClub, she is also a tutor in various computer science courses. We love having you again as an officer this year Ari!
     </p>
 
-    <h2 id = ""class = "officer-label transparent-paragraph center orbitron-font">
+    <h2 id = "chaplain-label" class = "officer-label transparent-paragraph center orbitron-font">
         Chaplain: Matthew Jang
     </h2>
     <p class = "image-container">
@@ -141,7 +146,7 @@ function scrollIntoViewCall(){
     </p>
 
 
-    <h2 id = "secretary"class = "officer-label transparent-paragraph center orbitron-font">
+    <h2 id = "social-media-manager-label"class = "officer-label transparent-paragraph center orbitron-font">
         Social Media Manager: Emily Forester
     </h2>
     <p class = "image-container">

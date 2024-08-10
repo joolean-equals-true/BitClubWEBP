@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+const eventImg = "/public/homePageEventGraphics/kickoff-party-graphic.png"
 const professorImg = "/public/David-North-2.webp"
 const newsImg = "/public/newsImages/aiRatBrain.jpg"
-const eventImg = "/public/lanPartyBanner.png"
 const logo = "/public/BITClubLogoTransparent.png"
 
 

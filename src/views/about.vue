@@ -29,14 +29,18 @@ const lanpartyPhoto = "/public/aboutImages/lanpartyPhoto.jpg"
 Bit Club is the official ACM (Math and Computer Science) chapter for OC, but everyone at OC is welcome!
 
 <br>
+<br>
 We meet Tuesdays in HSH 208.
 
+<br>
 <br>
 Some weeks we will have guest speakers to show you something new and interesting. Other weeks we hangout and play board games and video games.
 
 <br>
+<br>
 We can also help with computer science homework and answer related questions if needed.
 
+<br>
 <br>
 We have other fun events and several yearly events in addition to our weekly meetings.
 </p>

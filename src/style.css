@@ -34,6 +34,16 @@ the class below helps to visualize this. other than that it has no purpose
 }
 
 
+@keyframes enlarge-button{
+  from{
+    font-size: 30px;
+  }
+  to{
+    font-size: 60px;
+  }
+}
+
+
 
 
 
@@ -259,8 +269,24 @@ You can change the height though! the "child" class here is needed to unskew the
   padding-left: 35px;
   padding-right: 35px;
 }
+/*because i liked this officer style, I changed I making another to use everywhere. I'm too lazy to change its name on the other 
+page right now. */
+.fit-label{
+  font-size: 40px;
+  width:fit-content;
+  padding-left: 35px;
+  padding-right: 35px;
+}
 
+/*same here. I found this to be wonderful, I'm reusing it. this class allows me to use it everyone else. too lazy to change rn.*/
 .officer-description{
+  width: 48%;
+  font-size: 20px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.fit-description{
   width: 48%;
   font-size: 20px;
   margin-bottom: 90px;
@@ -291,10 +317,30 @@ You can change the height though! the "child" class here is needed to unskew the
 }
 
 .officer-navbar h3:hover{
+  cursor: pointer;
   animation-name: officerNavBarHover;
   animation-direction: alternate;
   animation-duration: 0.5s;
   background-color: rgba(109, 109, 109, 0.5);
+}
+
+.event-button{
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.event-button button:hover{
+  animation-name: enlarge-button;
+  animation-direction: alternate-reverse;
+  animation-duration: 0.5s;
+}
+
+
+
+.rounded-edge{
+  border-radius: 30px;
 }
 /*ID's---------------------------------*/
 
@@ -374,7 +420,7 @@ to reposition it in the right place.*/
 /*About Page tags-----------------------------*/
 #aboutHeader{
   font-size: 80px;
-  margin-top:200px;
+  margin-top:120px;
   margin-bottom: 20px;
 }
 
@@ -433,9 +479,6 @@ to reposition it in the right place.*/
   width: 70%;
 }
 
-#secretary{
-  
-}
 #secretary-description{
   width: 90%;
 }
@@ -451,7 +494,50 @@ to reposition it in the right place.*/
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 #number5{
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+/*Labels for the officers page: this is to enbale auto page scrolling/hopping*/
+#president-label{
+}
+
+#vp-label{
+}
+
+#secretary-label{
+}
+
+#chaplain-label{
+}
+
+#social-media-manager-label{
+}
+
+
+/*Event page id's------------------------------------------*/
+#events-label{
+  font-size: 90px;
+}
+
+#next-event-banner{
+  position: absolute;
+  top: 25%;
+}
+
+#next-event-button{
+  position: absolute;
+  top: 35%;
+}
+
+#recap-image{
+  max-width: 40%;
+}
+
+#event-list{
+ display: flex;
+ flex-direction:column;
+ padding: 0px;
 }
