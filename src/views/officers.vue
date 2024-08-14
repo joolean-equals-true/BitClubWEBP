@@ -9,6 +9,7 @@ const socialmediaManagerPhoto = "public/officerImages/emily.png"
 function scrollIntoViewCall(targetElement){
    
     var target = document.getElementById(targetElement);
+    console.log(target)
     target.scrollIntoView({
         behavior: "smooth",
         block: "start",

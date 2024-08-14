@@ -9,10 +9,8 @@ const count = ref(0)
 </script>
 
 <template>
-<div> 
-  <h1> 
-    Next Event:
-  </h1>
+<div > 
+ 
 </div>
 </template>
 

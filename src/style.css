@@ -37,9 +37,34 @@ the class below helps to visualize this. other than that it has no purpose
 @keyframes enlarge-button{
   from{
     font-size: 30px;
+    color: azure;
   }
   to{
     font-size: 40px;
+    color: rgb(0, 255, 0);
+  }
+}
+
+@keyframes register-button-hover{
+  from{
+    background-color: rgba(0, 0, 0, 0.349) ;
+    font-size: 30px;
+  }
+  to{
+    background-color:  rgba(0, 255, 0, 0.5);
+    font-size: 32px;
+  }
+}
+
+
+@keyframes pop-up-transition{
+  from{
+    opacity: 0%;
+    top: -1100px;
+  }
+  to{
+    opacity: 100%;
+    top: 0px;
   }
 }
 
@@ -331,13 +356,75 @@ page right now. */
   transition: 0.5s;
 }
 
-
-
-
+/*I made this because I did not want to continue making id's for headers.*/
+.large-header{
+  font-size: 60px;
+}
 
 .rounded-edge{
   border-radius: 30px;
 }
+
+
+/*Pop UP classes-------------------------------------------------------------------------------------*/
+.modal{
+  display: block;
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.164);
+  padding-top: 80px;
+  
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation:normal;
+  animation-name: pop-up-transition;
+  animation-duration: 1s;
+  
+  top: 0px;
+  left: 0px;
+}
+
+
+
+.modal-content{
+  display: flex;
+  background-color: rgb(53, 53, 53);
+  border-radius: 30px;
+  border-color: azure;
+  width: 980px;
+  height: 740px;
+  justify-items: left;
+}
+.modal-box{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  align-items: center;
+}
+.modal-button{
+ padding-left: 20px;
+ padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0.349);
+  transition: 0.5s;
+}
+.modal-button:hover{
+  animation:normal;
+  animation-name: register-button-hover;
+  animation-duration: 0.5s;
+  background-color:  rgba(0, 255, 0, 0.5);
+  cursor: pointer;
+  font-size: 32px;
+
+}
+.modal-paragraph{
+  font-size: 24px;
+  
+}
+
+
 /*ID's---------------------------------*/
 
 /*Bitclub logo ID: this id exists becuase I need to specifically change the bitclub logo, and nothing else needs this styling.
@@ -543,4 +630,13 @@ to reposition it in the right place.*/
   animation-direction:normal;
   animation-duration: 0.5s;
   font-size: 40px;
+  color: rgb(0, 255, 0);
+  cursor: pointer;
+}
+
+
+
+/*Event Graphics*/
+#kickOffGraphic{
+  max-width: 520px;
 }
