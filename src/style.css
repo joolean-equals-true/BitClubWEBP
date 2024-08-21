@@ -1,7 +1,10 @@
 /*Todo:
 At some point, you will need to make different font sizes and widths for different screens. you can look at the bitclub website to see how. 
 
-make the box of the image have a neon green outline. It'll be easier to see when the image transitions.*/
+
+
+
+/*make the box of the image have a neon green outline. It'll be easier to see when the image transitions.*/
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
@@ -13,6 +16,12 @@ rgb(87, 87, 87);
 rgb(0, 100, 0);
 the class below helps to visualize this. other than that it has no purpose
 */
+
+
+  
+
+
+
 
 /*Animations and Key Frames----------------------------*/
 @keyframes navbarHover{
@@ -305,10 +314,11 @@ page right now. */
 
 /*same here. I found this to be wonderful, I'm reusing it. this class allows me to use it everyone else. too lazy to change rn.*/
 .officer-description{
-  width: 48%;
+  width: min-content;
   font-size: 20px;
   margin-bottom: 90px;
-  text-align: center;
+  font-weight: 300px;
+  
 }
 
 .fit-description{
@@ -560,6 +570,7 @@ to reposition it in the right place.*/
 /*I needed to make these since some of the descriptions written are longer than others.*/
 #president-description{
   width: 70%;
+  font-weight: 300px;5
 }
 
 #secretary-description{
@@ -640,3 +651,42 @@ to reposition it in the right place.*/
 #kickOffGraphic{
   max-width: 520px;
 }
+
+
+
+
+/*Media Queries (for different website sizes)*/
+@media (max-width: 1600px){
+  /*Home page adjustments*/
+  #nextEventHeader{
+    font-size: 60px;
+  }
+
+  #newsDiv{
+    top: 370px;
+  }
+  #quoteDiv{
+    top: 370px;
+  }
+ #newsDescription{
+  width: 279px;
+ }
+ #newsImg{
+  width: 303px;
+ }
+
+
+ /*Officer page adjustments*/
+ .officer-label{
+  font-size: 28px;
+ }
+ .officer-description{
+  font-size:14px;
+ }
+
+ #president-description{
+  width: 50%;
+ }
+ 
+}
+
