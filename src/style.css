@@ -182,6 +182,16 @@ a{
   
 }
 
+.no-margins{
+  margin: 0px;
+}
+.half-margin{
+  margin: 50%;
+}
+.no-padding{
+ padding: 0px;
+}
+
 .navbar li{
   padding-left: 40px;
   padding-right: 40px;
@@ -285,7 +295,7 @@ You can change the height though! the "child" class here is needed to unskew the
   border-radius: 30px;
 }
 .officer-image{
-  max-width: 20%;
+  max-width: 22vw;
   border-radius: 30px;
 }
 
@@ -297,11 +307,16 @@ You can change the height though! the "child" class here is needed to unskew the
   border-width: 2px;
 }
 
+
 .officer-label{
-  font-size: 40px;
+  font-size: 3vw;
   width:fit-content;
   padding-left: 35px;
   padding-right: 35px;
+}
+.officer-professor{
+  max-width: 17vw ;
+  border-radius: 20px;
 }
 /*because i liked this officer style, I changed I making another to use everywhere. I'm too lazy to change its name on the other 
 page right now. */
@@ -314,17 +329,55 @@ page right now. */
 
 /*same here. I found this to be wonderful, I'm reusing it. this class allows me to use it everyone else. too lazy to change rn.*/
 .officer-description{
-  width: min-content;
-  font-size: 20px;
+  width: 90%;
+  font-size: 1.8vw;
   margin-bottom: 90px;
-  font-weight: 300px;
+  font-weight: 800%;
+  text-align: center; 
+}
+
+.officer-container{
+  display: flex;
+  padding-left: 5vw;
+  padding-right: 5vw;
+ justify-content:space-between;
+ align-items: center;
+ flex-grow: 0;
+
   
 }
 
+.fact-container{
+  padding: 10px;
+  background-color: rgb(87, 87, 87);
+  border-radius: 20px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content:baseline;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.fact-container h3{
+ font-size: 2vw;
+ margin-top: 0px;
+ margin-bottom: 1vw;
+}
+
+
+.fact-text{
+  font-size: 1.3vw;
+  font-weight: 800%;
+  text-align: center; 
+  margin: 0px;
+  padding: 0px;
+}
+
 .fit-description{
-  width: 48%;
-  font-size: 20px;
-  margin-bottom: 90px;
+  width: 40vw;
+  font-size: 1.6vw;
+  margin-bottom: 5vw;
   text-align: center;
 }
 
@@ -378,18 +431,15 @@ page right now. */
 
 /*Pop UP classes-------------------------------------------------------------------------------------*/
 .modal{
-  display: block;
-  position: fixed;
 
   background-color: rgba(0, 0, 0, 0.164);
   padding-top: 80px;
-  
-  width: 100%;
-  height: 100%;
+
   z-index: 1;
   animation:normal;
   animation-name: pop-up-transition;
   animation-duration: 1s;
+  animation-timing-function: ease-in-out;
   
   top: 0px;
   left: 0px;
@@ -402,8 +452,8 @@ page right now. */
   background-color: rgb(53, 53, 53);
   border-radius: 30px;
   border-color: azure;
-  width: 980px;
-  height: 740px;
+  width: 60vw;
+  height: auto;
   justify-items: left;
 }
 .modal-box{
@@ -431,7 +481,12 @@ page right now. */
 }
 .modal-paragraph{
   font-size: 24px;
-  
+}
+overlay:target .modal{
+  animation-name: pop-up-transition;
+  animation: reverse;
+  animation-duration:1s;
+  animation-timing-function: ease-in-out;
 }
 
 
@@ -456,10 +511,11 @@ all images need to be the same width and height before they are combined. These 
 
 
 #nextEventHeader{
-  font-size: 80px;
+  font-size: 4vw;
   text-shadow: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
+  
 }
 
 
@@ -557,9 +613,11 @@ to reposition it in the right place.*/
   font-weight: 500;
 }
 
+
+
 /*Officer Page tags*/
 #officer-header{
-  font-size: 90px;
+  font-size: 6vw;
 }
 
 
@@ -568,10 +626,7 @@ to reposition it in the right place.*/
 }
 
 /*I needed to make these since some of the descriptions written are longer than others.*/
-#president-description{
-  width: 70%;
-  font-weight: 300px;
-}
+
 
 #secretary-description{
   width: 90%;
@@ -649,44 +704,14 @@ to reposition it in the right place.*/
 
 /*Event Graphics*/
 #kickOffGraphic{
-  max-width: 520px;
+  max-width: 27vw;
 }
 
 
+/*temporary ID's... delete these after production*/
+#content1{
 
-
-/*Media Queries (for different website sizes)*/
-@media (max-width: 1600px){
-  /*Home page adjustments*/
-  #nextEventHeader{
-    font-size: 60px;
-  }
-
-  #newsDiv{
-    top: 370px;
-  }
-  #quoteDiv{
-    top: 370px;
-  }
- #newsDescription{
-  width: 279px;
- }
- #newsImg{
-  width: 303px;
- }
-
-
- /*Officer page adjustments*/
- .officer-label{
-  font-size: 28px;
- }
- .officer-description{
-  font-size:14px;
- }
-
- #president-description{
-  width: 50%;
- }
- 
 }
+
+
 

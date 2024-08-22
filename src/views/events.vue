@@ -14,12 +14,13 @@ window.onclick = function(event) {
   
     
    
-    
+    console.log("the value is: " + showEvent1.value)
     content1.style.animationName = "pop-up-transition";
     content1.style.animationDuration = "1s"
     content1.style.animationDirection = "reverse";
     content1.style.top = "-1100px"
     showEvent1 = ref(false)
+    console.log("the value is: " + showEvent1.value)
 
   }
 }
@@ -55,7 +56,7 @@ function moveAway(){
         <img id = "recap-image" class = "rounded-edge":src = "recapImg">
     </p>
 
-    <p class = "transparent-paragraph rounded-edge orbitron-font fit-description center">
+    <p class = "orbitron-font fit-description center">
         Make sure to come to our events! We have everything from professor
         talks to late-night parties, and you can even get free goodies like gift-cards and pizza!
     </p>
@@ -65,7 +66,7 @@ function moveAway(){
     </h1>
 
     <ul id = "event-list"class = "center">
-        <button  @click = "showEvent1 = true" v-on:click.prevent = "test()"class = "transparent-paragraph orbitron-font event-button center">
+        <button  popovertarget = "content1" popovertargetaction = "show" v-on:click.prevent = "test()"class = "transparent-paragraph orbitron-font event-button center">
             Kick Off Party
         </button>
 
@@ -113,7 +114,7 @@ function moveAway(){
 
 
 
-    <div id="content1" v-if = "showEvent1"  class = "modal">
+    <div id="content1"  class = "modal" v-b-popover>
         <div class = "modal-content center">
             <p class = "image-container">
                 <img class = "rounded-edge"id = "kickOffGraphic" :src = "kickOffGraphic">
