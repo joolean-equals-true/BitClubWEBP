@@ -12,21 +12,22 @@ Requirements:
    - The website will include carousel of photos from the most recent events that have taken place
    - The Website will include a menu (navigation bar) that is compressed horizontally on the top of the page.
    - The Website will include an option to register for the next event, which will lead them to the events page.
-   - The Website will include a bio about Bit Club
+
  
 - Events Page
   - The Events page will include a carousel of photos from the most recent events that have taken place
   - The page will include a (list) of events in order.
-      -Upon clicking any of these events, an according will reveal a photo of the event with information, and an option to register.
-      - (idea) The accordion should also include a list of people who have registered.
+      -Upon clicking any of these events, a popup will reveal a photo of the event with information, and an option to register.
 
-- About Page
-    - The page will include an option for every officer (the accordion style of the old website is already great)
-    - upon clicking a position, an accordion will show information:
+- Officers Page
+    - The page will include an option for every officer on the side of the screen.
+    - upon clicking a position, the page will automatically scroll to that officer's bio
         - A picture of the officer
         - The officer's name
         - A bio of the officer
-        - (better yet, another image of the officer showing them or their events. Can also be A carousel
+- About Page
+     - The page will include (at least) 4 recent pictures from bitclub.
+     - The page will have a description explaining what Bit Club is and its purpose to the user. 
 
 - Merchandise
    - The page will include a photo of every option of merchandise available, with the name of the item in a grid. (2X2)
