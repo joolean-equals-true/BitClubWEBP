@@ -434,18 +434,21 @@ page right now. */
 
 /*Pop UP classes-------------------------------------------------------------------------------------*/
 .modal{
-
+  display: none;
   background-color: rgba(0, 0, 0, 0.164);
   padding-top: 80px;
-
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   animation:normal;
   animation-name: pop-up-transition;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
   
-  top: 0px;
-  left: 0px;
 }
 
 
@@ -485,11 +488,8 @@ page right now. */
 .modal-paragraph{
   font-size: 24px;
 }
-overlay:target .modal{
-  animation-name: pop-up-transition;
-  animation: reverse;
-  animation-duration:1s;
-  animation-timing-function: ease-in-out;
+.modal .ascend{
+  top: -1100px;
 }
 
 

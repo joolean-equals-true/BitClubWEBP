@@ -8,35 +8,25 @@ const kickOffGraphic = "/public/eventImages/kickOffGraphic.png"
 
 
 window.onclick = function(event) {
-    let content1 = document.getElementById("content1")
-
-  if (event.target == content1) {
-  
-    
-   
-    console.log("the value is: " + showEvent1.value)
-    content1.style.animationName = "pop-up-transition";
-    content1.style.animationDuration = "1s"
-    content1.style.animationDirection = "reverse";
-    content1.style.top = "-1100px"
-    showEvent1 = ref(false)
-    console.log("the value is: " + showEvent1.value)
-
-  }
+    let events = document.getElementsByClassName("modal");
+    for(var i = 0; i < events.length; i++){
+        console.log(events.item(i))
+            if(event.target == events.item(i)){
+                events.item(i).style.top = "-1400px";
+                    setTimeout(function() {
+                    events.item(i).style.display = "none";
+                }, 1000)
+                break;
+        }
+    }
 }
 
-function test(){
-    console.log(showEvent1)
+function changeDisplay(targetElement){
+    let element = document.getElementById(targetElement)
+    element.style.display = "block";
+    element.style.top = "0";
 }
 
-function moveAway(){
-    let content1 = document.getElementById("content1")
-    content1.style.animationName = "pop-up-transition";
-    content1.style.animationDuration = "1s"
-    content1.style.animationDirection = "reverse";
-    content1.style.top = "-1100px"
-
-}
     
    
 </script>
@@ -66,7 +56,10 @@ function moveAway(){
     </h1>
 
     <ul id = "event-list"class = "center">
-        <button  popovertarget = "content1" popovertargetaction = "show" v-on:click.prevent = "test()"class = "transparent-paragraph orbitron-font event-button center">
+        <button @click = "changeDisplay('content1')"class = "transparent-paragraph orbitron-font event-button center">
+            First Meeting
+        </button>
+        <button  @click = "changeDisplay('content2')" class = "transparent-paragraph orbitron-font event-button center">
             Kick Off Party
         </button>
 
@@ -114,7 +107,7 @@ function moveAway(){
 
 
 
-    <div id="content1"  class = "modal" v-b-popover>
+    <div id="content1"  class = "modal">
         <div class = "modal-content center">
             <p class = "image-container">
                 <img class = "rounded-edge"id = "kickOffGraphic" :src = "kickOffGraphic">
@@ -132,7 +125,29 @@ function moveAway(){
                 </button>
             </div>
         </div>
+    </div>
 
+
+
+
+    <div id="content2"  class = "modal">
+        <div class = "modal-content center">
+            <p class = "image-container">
+                <img class = "rounded-edge"id = "kickOffGraphic" :src = "kickOffGraphic">
+            </p>
+
+            <div class = "modal-box">
+                <p class = "orbitron-font modal-paragraph">
+                    Come to the Kick Off Party! We'll have board games, yard games, food, and more! It'll be a great place to connect
+                    with people and meet the CS community. It'll be at Professor North's house at 6:00 pm. If you can't drive there,
+                    don't worry! we can carpool you there if need be! Make sure to register for this fun event!
+                </p>
+
+                <button class = "modal-button orbitron-font ">
+                    Register
+                </button>
+            </div>
+        </div>
     </div>
 
 
