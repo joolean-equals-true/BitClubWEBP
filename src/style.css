@@ -171,15 +171,10 @@ a{
   display: flex;
   align-items: center;
   justify-content:center;
- 
   margin: 0px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
- 
-  
-
-
-  
+  transition: 0.5s;
 }
 
 .no-margins{
@@ -199,6 +194,7 @@ a{
 }
 .navbar h2{
   text-decoration: none;
+  transition: 0.3s;
 }
 .navbar li:hover{
   
@@ -225,8 +221,8 @@ would rather make a class that has that specification. This will just update the
 }
 /*this class is meant to center the content inside an element*/
 .center-content{
-  display: flex;
-  justify-content:center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -236,36 +232,31 @@ how to skew a shape without transfroming the entire object, it is meant to hang 
 You can change the height though! the "child" class here is needed to unskew the text.*/
 .left-slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
-  width:auto;
+  width: fit-content;
   padding-right: 50px;
   padding-left: 50px;
-  position:absolute;
-  left: -3%;
-  display: flex;
-  justify-content:center;
-  transform: skew(-40deg);
+  transform:  translateX(-30px) skewX(-40deg);
  
 }
 .right-slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
-  width:auto;
+  width:fit-content;
   padding-right: 50px;
   padding-left: 50px;
-  position:absolute;
-  right: -3%;
-  display: flex;
   justify-content:center;
-  transform: skew(40deg);
+  transform: translateX(50px) skew(40deg);
  
 }
 
 .left-slanted-light-grey-banner h1{
   transform: skew(40deg);
   margin: 10px;
+  font-size: 2vw;
 }
 .right-slanted-light-grey-banner h1{
   transform: skew(-40deg);
   margin: 10px;
+  font-size: 1.5vw;
 }
 
 /*yeah I copied your code. what are you gonna do about it?*/
@@ -275,13 +266,13 @@ You can change the height though! the "child" class here is needed to unskew the
 }
 /*this is meant for div that has an image an a paragaph inside it. It makes it way easier to align.*/
 .image-paragraph-container{
-  display: flexbox;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
 }
 
 .description-box{
   margin:0px;
-  display: flex;
   height: auto;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -346,6 +337,21 @@ page right now. */
 
   
 }
+/*this container is mainly meanth for the home page. It just centers items in a column*/
+.column-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: flex-start;
+}
+.row-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+ 
+}
+
 
 .fact-container{
   padding: 10px;
@@ -448,7 +454,6 @@ page right now. */
   width: 100%;
   height: 100%;
   transition: all 1s;
-  
 }
 
 
@@ -491,7 +496,6 @@ page right now. */
 .modal .ascend{
   top: -1100px;
 }
-
 .event-graphic{
   max-width: 27vw;
 }
@@ -503,28 +507,27 @@ page right now. */
 it has a max width and is meant to be put in an "image container" */
 #bitclublogo{
   max-width: 40%;
-
 }
-
 /*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
 "scrolling" effect.
-all images need to be the same width and height before they are combined. These dimesnions are 
-880 x 664 pixels. Even after this they are scaled down by 0.5. not gonna fix what ain't broke. */
+all images need to be the same width and height before they are combined.*/
 #eventImg{
-  max-width: 40%;
+  max-width: 50vw;
   border-radius: 30px;
 }
 
-
+#middleDiv{
+  
+  /*transform: translateX(60px);*/
+  margin-left: 6vw;
+}
 
 #nextEventHeader{
   font-size: 4vw;
   text-shadow: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
-  
 }
-
 
 #newsImgContainer{
   margin: 0px;
@@ -532,34 +535,20 @@ all images need to be the same width and height before they are combined. These 
   justify-content: left;
 }
 #newsDescription{
-  width: 319px;
+  width: fit-content;
 }
 
 #newsImg{
-  width: 343px;/*perfect width for this image.*/
+  width: 100%;/*perfect width for this image.*/
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 
 /*this div contains the paragraph and image for the news on the home page. Since everything flows centered, I needed
 to reposition it in the right place.*/
-#newsDiv{
-  display: flexbox;
-  justify-content: left;
-  position: absolute;
-  left: 0px;
-  top: 390px;
-}
-#quoteDiv{
-  display: flexbox;
-  justify-content: right;
-  position: absolute;
-  right: 0px;
-  top:390px;
-}
 
 #quoteImg{
-  width: 343px;
+  width: 100%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -569,7 +558,7 @@ to reposition it in the right place.*/
   justify-content: right;
 }
 #quoteDescription{
-  width: 319px;
+  width: fit-content;
 }
 
 
@@ -720,5 +709,48 @@ to reposition it in the right place.*/
 
 }
 
+/*media queries*/
+/*Navigation Bar----------------------------------*/
+@media (max-width: 750px) {
+
+  .navbar li{
+    padding-left: 30px;
+    padding-right:30px;
+  }
+}
+
+
+@media (max-width: 680px){
+  .navbar li{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+
+@media (max-width: 520px){
+  .navbar h2{
+    font-size: 3.7vw;
+  }
+}
+
+
+/*Bit club logo
+Slanted Banner*/
+@media (max-width: 1020px){
+  #bitclublogo{
+    max-width: 85%;
+  }
+  .right-slanted-light-grey-banner h1{
+    font-size: 30px;
+  }
+}
+
+
+/*News and Quote Divs*/
+@media (max-width: 1400px){
+
+}
 
 

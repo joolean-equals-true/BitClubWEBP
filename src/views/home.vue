@@ -21,53 +21,71 @@ const count = ref(0)
     <img id = "bitclublogo" :src = logo>
   </p>
 
-<ul class = "left-slanted-light-grey-banner"> 
-  <h1> 
-    News:
-  </h1>
-</ul>
+<div class = "row-container">
 
-<ul class = "right-slanted-light-grey-banner">
-  <h1>
-    Quote of the Day:
-  </h1>
-</ul>
+<div class = "column-container">
+  <ul class = "left-slanted-light-grey-banner"> 
+    <h1> 
+      News:
+    </h1>
+  </ul>
 
-<h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
-  Next Event
-</h1>
-
-<p class = "image-container">
-    <img id = "eventImg" :src = eventImg>
-</p>
-
-<div class = "center-content"> 
-  <button class = "rubik-font"> 
-  Register
-</button>
+  <div id = "newsDiv" class = "image-paragraph-container">
+      <p id = "newsImgContainer" class = "image-container">
+        <img id = "newsImg" :src = newsImg>
+    
+      </p>
+    <p id = "newsDescription" class = "rubik-font description-box">
+        Google trains new AI model on rat brains,
+        our over lords will replace are primitive human minds in next
+        5 years...
+    </p>
+  </div>
 </div>
 
-<div id = "newsDiv" class = "image-paragraph-container">
-  <p id = "newsImgContainer" class = "image-container">
-  <img id = "newsImg" :src = newsImg>
- 
-</p>
-<P id = "newsDescription" class = "rubik-font description-box">
-    Google trains new AI model on rat brains,
-    our over lords will replace are primitive human minds in next
-    5 years...
-</P>
+
+<div id = "middleDiv" class ="column-container">
+    <h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
+      Next Event
+    </h1>
+    <p class = "image-container">
+        <img id = "eventImg" :src = eventImg>
+    </p>
+    
+      <button class = "rubik-font center-content"> 
+        Register
+      </button>
+
+    
+</div>
+
+
+<div class = "column-container">
+  <ul class = "right-slanted-light-grey-banner">
+    <h1>
+      Quote of the Day:
+    </h1>
+  </ul>
+
+  <div id = "quoteDiv" class = "image-paragraph-container">
+    <p id = "quoteImgContainer" class ="image-container">
+      <img id ="quoteImg" :src = professorImg>
+    </p>
+    <p id = "quoteDescription"class = "rubik-font description-box">
+        "I'm gonna replace you guys with students that actually care." - North
+    </p>
+  </div>
+
+
 
 </div>
 
-<div id = "quoteDiv" class = "image-paragraph-container">
-  <p id = "quoteImgContainer" class ="image-container">
-    <img id ="quoteImg" :src = professorImg>
-  </p>
-  <p id = "quoteDescription"class = "rubik-font description-box">
-      "I'm gonna replace you guys with students that actually care." - North
-  </p>
+
 </div>
+
+
+
+
 
 
 =
