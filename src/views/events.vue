@@ -42,10 +42,24 @@ function changeDisplay(targetElement){
 
 <template>
 
-    <h2 id = "events-label"class = "green-header orbitron-font">
-        Club Events
-    </h2>
-    <h1 class = "transparent-paragraph orbitron-font fit-label center">
+    <div id = "event-container-1" class = "row-container">
+        <div id="next-event-div" class = "column-container"> 
+            <ul id="next-event-banner" class = "left-slanted-light-grey-banner">
+                <h1>
+                    Next Event:
+                </h1>
+            </ul>
+                <button id = "next-event-button"class = "transparent-paragraph orbitron-font event-button">
+                    First Meeting
+                </button>
+        </div>
+        <h2 id = "events-label"class = "green-header orbitron-font">
+            Club Events
+        </h2>
+    
+    </div>
+   
+    <h1 class = "orbitron-font fit-label center">
         Latest Event Recap
     </h1>
 
@@ -62,7 +76,7 @@ function changeDisplay(targetElement){
         All Events in Order
     </h1>
 
-    <ul id = "event-list"class = "center">
+    <ul class = "center event-list">
         <button @click = "changeDisplay('content1')"class = "transparent-paragraph orbitron-font event-button center">
             First Meeting
         </button>
@@ -372,14 +386,7 @@ function changeDisplay(targetElement){
 
 
 
-    <ul id="next-event-banner" class = "left-slanted-light-grey-banner">
-            <h1>
-                Next Event:
-            </h1>
-    </ul>
-    <button id = "next-event-button"class = "transparent-paragraph orbitron-font event-button">
-            First Meeting
-    </button>
+   
 
 
 </template>

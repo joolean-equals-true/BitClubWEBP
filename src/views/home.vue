@@ -60,7 +60,7 @@ const count = ref(0)
 </div>
 
 
-<div class = "column-container">
+<div id = "rightDiv" class = "column-container">
   <ul class = "right-slanted-light-grey-banner">
     <h1>
       Quote of the Day:
