@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-const eventImg = "/public/homePageEventGraphics/kickoff-party-graphic.png"
+const eventImg3 = "/public/homePageEventGraphics/first-meeting-3.png"
+const eventImg2 = "/public/homePageEventGraphics/first-meeting-2.png"
+const eventImg = "/public/homePageEventGraphics/first-meeting-1.png"
 const professorImg = "/public/David-North-2.webp"
 const newsImg = "/public/newsImages/aiRatBrain.jpg"
 const logo = "/public/BITClubLogoTransparent.png"
@@ -23,7 +25,7 @@ const count = ref(0)
 
 <div class = "row-container">
 
-<div class = "column-container">
+<div id  = "rightDiv" class = "column-container">
   <ul class = "left-slanted-light-grey-banner"> 
     <h1> 
       News:
@@ -48,13 +50,27 @@ const count = ref(0)
     <h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
       Next Event
     </h1>
-    <p class = "image-container">
-        <img id = "eventImg" :src = eventImg>
-    </p>
+
+    <div class ="carousel-container">
+      <div>
+          <img class = "event-img" :src = eventImg>
+      </div>
+      <div>
+          <img class = "event-img":src = eventImg2>
+      </div>
+     <div>
+        <img class = "event-img" :src = eventImg3>
+     </div>
+
+    </div>
     
-      <button class = "rubik-font center-content"> 
+    
+    <div id ="register-button">
+      <button class = "rubik-font"> 
         Register
       </button>
+    </div>
+      
 
     
 </div>

@@ -77,6 +77,28 @@ the class below helps to visualize this. other than that it has no purpose
   }
 }
 
+@keyframes glow{
+  from{
+    color: rgb(0, 255, 0);
+  }
+  to{
+    color: rgb(234, 255, 234)
+  }
+}
+
+
+@keyframes fade-in-fade-out{
+  from{
+    opacity:100%;
+  }
+  to{
+    opacity: 0%;
+  }
+}
+
+
+
+
 
 
 
@@ -117,6 +139,7 @@ html, body{
 body{
   margin: 0px;
   background-color: rgb(26, 26, 26);
+	
 }
 
 
@@ -144,11 +167,12 @@ p{
 
 button {
   border-radius: 3em;
-  background-color: rgb(65, 65, 65);
+  background-color: rgb(53, 53, 53);
   color: azure;
   font-size: 2vw;
   padding: 10px;
   border-style: none;
+  transition: 0.5s;
 }
 
 img{
@@ -160,6 +184,36 @@ a{
 
 /*Speacial Classes--------------*/
 
+
+/*carousel-container*/
+/*this container is meant to hold a multitude of images.*/
+.carousel-container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 50vw;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container > div{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    margin-right: 30px;
+    transform-origin: center center;
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-img{
+    max-width: 50vw;
+    border-radius: 30px;
+    object-fit: cover;
+}
 /*class green: this changes the color of an element's text to green.*/
 .green-header{
   color: rgb(0, 255, 0);
@@ -204,6 +258,13 @@ a{
   background-color: rgb(87, 87, 87);
 }
 
+.navbar li:active{
+    animation-direction: alternate;
+    animation-name: selected;
+    animation-duration: 0.1s;
+
+}
+
 
 
 
@@ -232,6 +293,7 @@ how to skew a shape without transfroming the entire object, it is meant to hang 
 You can change the height though! the "child" class here is needed to unskew the text.*/
 .left-slanted-light-grey-banner{
   background-color: rgb(87, 87, 87);
+  background-image: linear-gradient(to right, rgb(68, 68, 68),rgb(118, 118, 118));
   width: fit-content;
   padding-right: 50px;
   padding-left: 50px;
@@ -239,7 +301,8 @@ You can change the height though! the "child" class here is needed to unskew the
  
 }
 .right-slanted-light-grey-banner{
-  background-color: rgb(87, 87, 87);
+  
+  background-image: linear-gradient(to left, rgb(68, 68, 68),rgb(118, 118, 118));
   width:fit-content;
   padding-right: 50px;
   padding-left: 50px;
@@ -265,6 +328,11 @@ You can change the height though! the "child" class here is needed to unskew the
   text-align: center;
   
 }
+
+
+
+
+
 /*this is meant for div that has an image an a paragaph inside it. It makes it way easier to align.*/
 .image-paragraph-container{
   display: flex;
@@ -335,8 +403,6 @@ page right now. */
  justify-content:space-between;
  align-items: center;
  flex-grow: 0;
-
-  
 }
 /*this container is mainly meanth for the home page. It just centers items in a column*/
 .column-container{
@@ -497,8 +563,13 @@ page right now. */
 .modal-paragraph{
   font-size: 1.5vw;
 }
-.modal .ascend{
-  top: -1100px;
+.close-text{
+  animation-name: fade-in-fade-out;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  padding: 0;
+ 
 }
 .event-graphic{
   max-width: 27vw;
@@ -536,13 +607,24 @@ it has a max width and is meant to be put in an "image container" */
 /*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
 "scrolling" effect.
 all images need to be the same width and height before they are combined.*/
-#eventImg{
-  max-width: 50vw;
-  border-radius: 30px;
-}
+
 
 #rightDiv{
   max-width: 22%;
+}
+
+#register-button :hover{
+  animation-name: navBarHover;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  background-color: rgb(87, 87, 87);
+  cursor: pointer;
+}
+
+#register-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 

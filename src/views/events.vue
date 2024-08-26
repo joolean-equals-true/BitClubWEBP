@@ -144,8 +144,11 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
+            
         </div>
+        
     </div>
 
 
@@ -166,6 +169,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -187,6 +191,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -207,6 +212,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -229,6 +235,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -251,6 +258,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -273,6 +281,7 @@ function changeDisplay(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -288,7 +297,7 @@ function changeDisplay(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -304,7 +313,7 @@ function changeDisplay(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -320,7 +329,7 @@ function changeDisplay(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -336,7 +345,7 @@ function changeDisplay(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -353,7 +362,7 @@ function changeDisplay(targetElement){
                     This paticular individual refuses to tell us...
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
@@ -369,7 +378,7 @@ function changeDisplay(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-               
+                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
             </div>
         </div>
     </div>
