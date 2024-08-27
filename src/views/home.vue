@@ -5,7 +5,7 @@ const eventImg3 = "/public/homePageEventGraphics/first-meeting-3.png"
 const eventImg2 = "/public/homePageEventGraphics/first-meeting-2.png"
 
 const professorImg = "/public/David-North-2.webp"
-const newsImg = "/public/newsImages/aiRatBrain.jpg"
+const newsImg = "/public/newsImages/pavelDurov.avif"
 const logo = "/public/BITClubLogoTransparent.png"
 
 
@@ -38,7 +38,7 @@ function scrollIntoViewCall(targetElement){
 
 <div class = "row-container">
 
-<div id  = "rightDiv" class = "column-container">
+<div id  = "rightDiv" class = "column-container justify-start">
   <ul class = "left-slanted-light-grey-banner"> 
     <h1> 
       News:
@@ -51,9 +51,9 @@ function scrollIntoViewCall(targetElement){
     
       </p>
     <p id = "newsDescription" class = "rubik-font description-box">
-        Google trains new AI model on rat brains,
-        our over lords will replace are primitive human minds in next
-        5 years...
+        Pavel Durov, owner of Telegram, gets arrested in France,
+        facing acussations of being "passive" with cyber crimes being
+        committed on his platform...
     </p>
   </div>
 </div>
@@ -89,7 +89,7 @@ function scrollIntoViewCall(targetElement){
   </div>
 
 
-<div id = "rightDiv" class = "column-container">
+<div id = "rightDiv" class = "column-container justify-start">
   <ul class = "right-slanted-light-grey-banner">
     <h1>
       Quote of the Day:
@@ -101,7 +101,7 @@ function scrollIntoViewCall(targetElement){
       <img id ="quoteImg" :src = professorImg>
     </p>
     <p id = "quoteDescription"class = "rubik-font description-box">
-        "I'm gonna replace you guys with students that actually care." - North
+       "I don't know If I want you to know what you can do at midnight." - North
     </p>
   </div>
 

@@ -452,6 +452,11 @@ page right now. */
  
 }
 
+/*flex styles. these are so I can apply them without messing up all the other elements*/
+.justify-start{
+  justify-content: flex-start;
+  padding-top: 5rem;
+}
 
 .fact-container{
   padding: 10px;

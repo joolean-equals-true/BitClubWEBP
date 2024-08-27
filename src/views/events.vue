@@ -3,6 +3,8 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 const recapImg = "/public/eventImages/recap/kickoff-image-1.png"
+const recapImg2 = "/public/eventImages/recap/kick-off-image-2.jpg"
+const recapImg3 = "/public/eventImages/recap/kick-off-image-3.jpg"
 let showEvent1 = ref(false);
 const kickOffGraphic = "/public/eventImages/kickOffGraphic.png"
 const firstEventGraphic ="/public/eventImages/firstMeeting.png"
@@ -34,9 +36,16 @@ function changeDisplay(targetElement){
     element.style.top = "0";
 }
 
-
-    
+function scrollIntoViewCall(targetElement){
    
+   var target = document.getElementById(targetElement);
+   console.log(target)
+   target.scrollIntoView({
+       behavior: "smooth",
+       block: "start",
+       inline: "nearest"
+   })
+}
 </script>
 
 
@@ -50,9 +59,14 @@ function changeDisplay(targetElement){
                     Next Event:
                 </h1>
             </ul>
-                <button id = "next-event-button"class = "transparent-paragraph orbitron-font event-button">
+            <div class = "event-list">
+                <button id = "next-event-button"class = "transparent-paragraph orbitron-font event-button"
+                            @click = "changeDisplay('content1')">
                     First Meeting
                 </button>
+
+            </div>
+               
         </div>
         <h2 id = "events-label"class = "green-header orbitron-font">
             Club Events
@@ -64,9 +78,22 @@ function changeDisplay(targetElement){
         Latest Event Recap
     </h1>
 
-    <p class = "image-container center">
-        <img id = "recap-image" class = "rounded-edge":src = "recapImg">
-    </p>
+    <section class = "carousel-container">
+        <div class = "slider-wrapper">
+            <div class = "slider">
+                    <img id = "recap-img-1" :src = "recapImg">
+                    <img id = "recap-img-2" :src ="recapImg2">
+                    <img id = "recap-img-3" :src ="recapImg3">
+            </div>
+
+            <div class = "slider-nav">
+                <a @click = "scrollIntoViewCall('recap-img-1')"></a>
+                <a @click = "scrollIntoViewCall('recap-img-2')"></a>
+                <a @click = "scrollIntoViewCall('recap-img-3')"></a>
+            </div>
+        </div>
+
+    </section>
 
     <p class = "orbitron-font fit-description center">
         Make sure to come to our events! We have everything from professor
