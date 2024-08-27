@@ -34,13 +34,14 @@ function changeDisplay(targetElement){
     element.style.top = "0";
 }
 
+
     
    
 </script>
 
 
 
-<template>
+<template >
 
     <div id = "event-container-1" class = "row-container">
         <div id="next-event-div" class = "column-container"> 

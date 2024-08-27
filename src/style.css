@@ -101,9 +101,6 @@ the class below helps to visualize this. other than that it has no purpose
 
 
 
-
-
-
 .color-pallette{
   background-color: rgb(26, 26, 26);
   background-color: rgb(53, 53, 53);
@@ -177,6 +174,7 @@ button {
 
 img{
   height: auto;
+  max-width: 100%;
 }
 a{
   text-decoration: none;
@@ -188,32 +186,66 @@ a{
 /*carousel-container*/
 /*this container is meant to hold a multitude of images.*/
 .carousel-container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider{
   display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  max-width: 50vw;
+  aspect-ratio: 16/9;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  border-radius: 2.5rem;
 }
 
-.carousel-container > div{
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    margin-right: 30px;
-    transform-origin: center center;
-    transition: transform 0.5s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.event-img{
-    max-width: 50vw;
-    border-radius: 30px;
-    object-fit: cover;
+.slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(53, 53, 53);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+  opacity: 100%;
+  background-color: rgb(87, 87, 87);
+  cursor: pointer;
+}
+
+/*scroll-container:
+this class basically does what it says. It turns a page into a scroll container.*/
+.scroll-container{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.scroll-container > * {
+  scroll-snap-align: start;
+}
+
 /*class green: this changes the color of an element's text to green.*/
 .green-header{
   color: rgb(0, 255, 0);
@@ -532,7 +564,7 @@ page right now. */
   background-color: rgb(53, 53, 53);
   border-radius: 30px;
   border-color: azure;
-  width: 60vw;
+  width: 60rem;
   height: auto;
   justify-items: left;
 
@@ -625,6 +657,7 @@ all images need to be the same width and height before they are combined.*/
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1vw;
 }
 
 
@@ -778,7 +811,6 @@ to reposition it in the right place.*/
 
 /*media queries*/
 /*Navigation Bar----------------------------------*/
-
 
 
 
@@ -965,5 +997,16 @@ Slanted Banner*/
 @media (max-width: 520px){
   .navbar h2{
     font-size: 3.7vw;
+  }
+}
+
+
+@media (hover :hover){
+  .carousel-container{
+    animation-name: to-right;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-direction: normal;
+
   }
 }

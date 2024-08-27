@@ -1,8 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+const eventImg = "/public/homePageEventGraphics/first-meeting-1.png"
 const eventImg3 = "/public/homePageEventGraphics/first-meeting-3.png"
 const eventImg2 = "/public/homePageEventGraphics/first-meeting-2.png"
-const eventImg = "/public/homePageEventGraphics/first-meeting-1.png"
+
 const professorImg = "/public/David-North-2.webp"
 const newsImg = "/public/newsImages/aiRatBrain.jpg"
 const logo = "/public/BITClubLogoTransparent.png"
@@ -16,6 +17,18 @@ defineProps({
 })
 
 const count = ref(0)
+function scrollIntoViewCall(targetElement){
+   
+   var target = document.getElementById(targetElement);
+   console.log(target)
+   target.scrollIntoView({
+       behavior: "smooth",
+       block: "start",
+       inline: "nearest"
+   })
+}
+
+
 </script>
 
 <template>
@@ -45,35 +58,35 @@ const count = ref(0)
   </div>
 </div>
 
-
 <div id = "middleDiv" class ="column-container">
     <h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
       Next Event
     </h1>
 
-    <div class ="carousel-container">
-      <div>
-          <img class = "event-img" :src = eventImg>
-      </div>
-      <div>
-          <img class = "event-img":src = eventImg2>
-      </div>
-     <div>
-        <img class = "event-img" :src = eventImg3>
-     </div>
-
-    </div>
-    
+    <section class = "carousel-container">
+        <div class = "slider-wrapper">
+            <div class = "slider">
+              <img id = 'event-img-1' :src = "eventImg">
+              <img id = 'event-img-2' :src = "eventImg2">
+              <img id = 'event-img-3' :src = "eventImg3">
+            </div>
+            <div class ="slider-nav">
+              <a @click = "scrollIntoViewCall('event-img-1')"></a>
+              <a @click = "scrollIntoViewCall('event-img-2')"></a>
+              <a @click = "scrollIntoViewCall('event-img-3')"></a>
+            </div>
+        </div>
+    </section>
     
     <div id ="register-button">
-      <button class = "rubik-font"> 
+      <button id = "button"class = "rubik-font"> 
         Register
       </button>
     </div>
-      
+  
 
     
-</div>
+  </div>
 
 
 <div id = "rightDiv" class = "column-container">
@@ -98,6 +111,10 @@ const count = ref(0)
 
 
 </div>
+
+
+
+
 
 
 

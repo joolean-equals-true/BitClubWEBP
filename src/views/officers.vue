@@ -46,10 +46,12 @@ function scrollIntoViewCall(targetElement){
     </ul>
 
 
+
+
+
     <h1 id = "officer-header" class = "green-header orbitron-font">
         Meet Our Team
     </h1>
-
 
     <h2 id = "president-label"class = "officer-label transparent-paragraph center orbitron-font">
         President: Jenna Stilling
