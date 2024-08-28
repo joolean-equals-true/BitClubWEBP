@@ -172,7 +172,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
             
         </div>
@@ -197,7 +197,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -219,7 +219,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -240,7 +240,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -263,7 +263,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -286,7 +286,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -309,7 +309,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -325,7 +325,7 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -341,7 +341,7 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -357,7 +357,7 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -373,7 +373,7 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
@@ -390,7 +390,7 @@ function scrollIntoViewCall(targetElement){
                     This paticular individual refuses to tell us...
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>

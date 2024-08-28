@@ -69,7 +69,7 @@ the class below helps to visualize this. other than that it has no purpose
 @keyframes pop-up-transition{
   from{
     opacity: 0%;
-    top: -1100px;
+    top: -500px;
   }
   to{
     opacity: 100%;
