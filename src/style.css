@@ -69,7 +69,7 @@ the class below helps to visualize this. other than that it has no purpose
 @keyframes pop-up-transition{
   from{
     opacity: 0%;
-    top: -500px;
+    top: -1100px;
   }
   to{
     opacity: 100%;
@@ -186,12 +186,12 @@ a{
 /*carousel-container*/
 /*this container is meant to hold a multitude of images.*/
 .carousel-container{
-    padding: 2rem;
+
 }
 
 .slider-wrapper{
   position: relative;
-  max-width: 48rem;
+  max-width: 35vw;
   margin: 0 auto;
 }
 
@@ -244,6 +244,22 @@ this class basically does what it says. It turns a page into a scroll container.
 
 .scroll-container > * {
   scroll-snap-align: start;
+}
+
+/*This style is for the images on the home page that are not in the slider*/
+.home-page-image{
+  flex: 1 0 100%;
+  object-fit: cover;
+  width: 40rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.home-page-image-container{
+  display: flex;
+  aspect-ratio: 6/4;
+  width: 20vw;
+  padding: 0;
+  margin:0
 }
 
 /*class green: this changes the color of an element's text to green.*/
@@ -329,7 +345,7 @@ You can change the height though! the "child" class here is needed to unskew the
   width: fit-content;
   padding-right: 50px;
   padding-left: 50px;
-  transform:  translateX(-30px) skewX(-40deg);
+  transform:  translateX(-6vw) skewX(-40deg);
  
 }
 .right-slanted-light-grey-banner{
@@ -339,7 +355,7 @@ You can change the height though! the "child" class here is needed to unskew the
   padding-right: 50px;
   padding-left: 50px;
   justify-content:center;
-  transform: translateX(75px) skew(40deg);
+  transform: translateX(3vw) skew(40deg);
   transition: 0.5s;
  
 }
@@ -380,6 +396,7 @@ You can change the height though! the "child" class here is needed to unskew the
   display: flex;
   justify-content: center;
   background-color: rgb(87, 87, 87);
+  width:fit-content;
 }
 
 .about-image{
@@ -456,6 +473,7 @@ page right now. */
 .justify-start{
   justify-content: flex-start;
   padding-top: 5rem;
+  align-items: center;
 }
 
 .fact-container{
@@ -555,11 +573,11 @@ page right now. */
   z-index: 1;
   animation:normal;
   animation-name: pop-up-transition;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out;
   width: 100%;
   height: 100%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 
@@ -638,17 +656,13 @@ page right now. */
 /*Bitclub logo ID: this id exists becuase I need to specifically change the bitclub logo, and nothing else needs this styling.
 it has a max width and is meant to be put in an "image container" */
 #bitclublogo{
-  max-width: 40%;
+  max-width: 70%;
   transition: 0.5s;
 }
 /*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
 "scrolling" effect.
 all images need to be the same width and height before they are combined.*/
 
-
-#rightDiv{
-  max-width: 22%;
-}
 
 #register-button :hover{
   animation-name: navBarHover;
@@ -667,45 +681,15 @@ all images need to be the same width and height before they are combined.*/
 
 
 #nextEventHeader{
-  font-size: 4vw;
+  font-size: 3vw;
   text-shadow: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-#newsImgContainer{
-  margin: 0px;
-  padding: 0px;
-  justify-content: left;
-}
-#newsDescription{
-  width: fit-content;
-}
-
-#newsImg{
-  max-width: 100%;/*perfect width for this image.*/
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
 
 /*this div contains the paragraph and image for the news on the home page. Since everything flows centered, I needed
 to reposition it in the right place.*/
-
-#quoteImg{
-  max-width: 100%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-#quoteImgContainer{
-  margin: 0px;
-  padding: 0px;
-  justify-content: right;
- 
-}
-#quoteDescription{
-  width: fit-content;
-}
-
 
 /*About Page tags-----------------------------*/
 #about-header{

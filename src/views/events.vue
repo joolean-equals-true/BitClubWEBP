@@ -24,7 +24,7 @@ window.onclick = function(event) {
                 events.item(i).style.top = "-1400px";
                     setTimeout(function() {
                     events.item(i).style.display = "none";
-                }, 1000)
+                }, 500)
                 break;
         }
     }

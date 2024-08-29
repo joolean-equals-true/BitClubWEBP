@@ -32,9 +32,7 @@ function scrollIntoViewCall(targetElement){
 </script>
 
 <template>
-<p class = "image-container">
-    <img id = "bitclublogo" :src = logo>
-  </p>
+
 
 <div class = "row-container">
 
@@ -46,8 +44,8 @@ function scrollIntoViewCall(targetElement){
   </ul>
 
   <div id = "newsDiv" class = "image-paragraph-container">
-      <p id = "newsImgContainer" class = "image-container">
-        <img id = "newsImg" :src = newsImg>
+      <p class = "home-page-image-container">
+        <img class = "home-page-image" :src = newsImg>
     
       </p>
     <p id = "newsDescription" class = "rubik-font description-box">
@@ -59,11 +57,14 @@ function scrollIntoViewCall(targetElement){
 </div>
 
 <div id = "middleDiv" class ="column-container">
+  <p class = "image-container">
+    <img id = "bitclublogo" :src = logo>
+  </p>
     <h1 id ="nextEventHeader" class = "green-header orbitron-font center"> 
       Next Event
     </h1>
 
-    <section class = "carousel-container">
+    <section class = "carousel-container center">
         <div class = "slider-wrapper">
             <div class = "slider">
               <img id = 'event-img-1' :src = "eventImg">
@@ -97,8 +98,8 @@ function scrollIntoViewCall(targetElement){
   </ul>
 
   <div id = "quoteDiv" class = "image-paragraph-container">
-    <p id = "quoteImgContainer" class ="image-container">
-      <img id ="quoteImg" :src = professorImg>
+    <p class ="home-page-image-container">
+      <img class = "home-page-image" :src = professorImg>
     </p>
     <p id = "quoteDescription"class = "rubik-font description-box">
        "I don't know If I want you to know what you can do at midnight." - North
