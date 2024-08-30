@@ -2,32 +2,40 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const recapImg = "/public/eventImages/recap/kickoff-image-1.png"
-const recapImg2 = "/public/eventImages/recap/kick-off-image-2.jpg"
-const recapImg3 = "/public/eventImages/recap/kick-off-image-3.jpg"
 let showEvent1 = ref(false);
 const kickOffGraphic = "/public/eventImages/kickOffGraphic.png"
-const firstEventGraphic ="/public/eventImages/firstMeeting.png"
 const studentPresentationGraphic = "/public/eventImages/studentPresentationGraphic.png"
 const appleIIGamesGraphic = "/public/eventImages/appleIIGamesGraphic.png"
 const resumeWorkshopGraphic = "/public/eventImages/resumeWorkshopGraphic.png"
 const gameNightGraphic = "/public/eventImages/gameNightGraphic.png"
 const speakerGraphic = "/public/eventImages/speakerGraphic.png"
 const mysteryProfessorGraphic = "/public/eventImages/professorApproaching.jpg"
+const recapImg1 = "/public/eventImages/recap/firstMeeting/IMG_0644.jpg"
+const recapImg2 = "/public/eventImages/recap/firstMeeting/IMG_0645.jpg"
 
-
+let recapImgs = ["recap-img-1", "recap-img-2"]
+let pos = 0;
 window.onclick = function(event) {
     let events = document.getElementsByClassName("modal");
     for(var i = 0; i < events.length; i++){
         console.log(events.item(i))
             if(event.target == events.item(i)){
-                events.item(i).style.top = "-1400px";
+                events.item(i).style.top = "-1800px";
                     setTimeout(function() {
                     events.item(i).style.display = "none";
                 }, 500)
                 break;
         }
     }
+}
+function changeImage(direction){
+  if(direction == 1 && pos < recapImgs.length){
+    pos++;
+  }
+  else if (pos >0){
+    pos--;
+  }
+  scrollIntoViewCall(recapImgs.at(pos))
 }
 
 function changeDisplay(targetElement){
@@ -54,14 +62,14 @@ function scrollIntoViewCall(targetElement){
 
     <div id = "event-container-1" class = "row-container">
         <div id="next-event-div" class = "column-container"> 
-            <ul id="next-event-banner" class = "left-slanted-light-grey-banner">
-                <h1>
-                    Next Event:
-                </h1>
+            <ul id="recap-banner" class = "left-slanted-light-grey-banner">
+                <h2 class = "orbitron-font">
+                    Latest Event Recap:
+                </h2>
             </ul>
-            <div class = "event-list">
-                <button id = "next-event-button"class = "transparent-paragraph orbitron-font event-button"
-                            @click = "changeDisplay('content1')">
+            <div id = "recap-div" class = "event-list">
+                <button id = "recap-button"class = "transparent-paragraph orbitron-font event-button"
+                            @click = "changeDisplay('recap-modal')">
                     First Meeting
                 </button>
 
@@ -74,26 +82,6 @@ function scrollIntoViewCall(targetElement){
     
     </div>
    
-    <h1 class = "orbitron-font fit-label center">
-        Latest Event Recap
-    </h1>
-
-    <section class = "carousel-container">
-        <div class = "slider-wrapper">
-            <div class = "slider">
-                    <img id = "recap-img-1" :src = "recapImg">
-                    <img id = "recap-img-2" :src ="recapImg2">
-                    <img id = "recap-img-3" :src ="recapImg3">
-            </div>
-
-            <div class = "slider-nav">
-                <a @click = "scrollIntoViewCall('recap-img-1')"></a>
-                <a @click = "scrollIntoViewCall('recap-img-2')"></a>
-                <a @click = "scrollIntoViewCall('recap-img-3')"></a>
-            </div>
-        </div>
-
-    </section>
 
     <p class = "orbitron-font fit-description center">
         Make sure to come to our events! We have everything from professor
@@ -105,85 +93,92 @@ function scrollIntoViewCall(targetElement){
     </h1>
 
     <ul class = "center event-list">
-        <button @click = "changeDisplay('content1')"class = "transparent-paragraph orbitron-font event-button center">
-            First Meeting
-        </button>
-        <button @click = "changeDisplay('content2')"class = "transparent-paragraph orbitron-font event-button center">
-            Resume Workshop
-        </button>
+    
+
+        <div>
+            <button @click = "changeDisplay('content2')"class = "transparent-paragraph orbitron-font event-button center">
+                Resume Workshop
+            </button>
+            <h1 class = "green-header orbitron-font">Sept 5</h1>
+        </div>
+       
+        <div>
+            <button @click = "changeDisplay('content3')"class = "transparent-paragraph orbitron-font event-button center">
+                Apple II Games
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
+        <div>
+            <button  @click = "changeDisplay('content4')" class = "transparent-paragraph orbitron-font event-button center">
+                Kick Off Party
+            </button>
+            <h1 class = "green-header orbitron-font">Sept 20</h1>
+        </div>
+
+        <div>
+            <button @click = "changeDisplay('content5')" class = "transparent-paragraph orbitron-font event-button center">
+                Student Presentation
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
         
-        <button @click = "changeDisplay('content3')"class = "transparent-paragraph orbitron-font event-button center">
-            Apple II Games
-        </button>
+        <div>
+            <button @click = "changeDisplay('content6')"class = "transparent-paragraph orbitron-font event-button center">
+                Game Night
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
 
-        <button  @click = "changeDisplay('content4')" class = "transparent-paragraph orbitron-font event-button center">
-            Kick Off Party
-        </button>
-
-        <button @click = "changeDisplay('content5')" class = "transparent-paragraph orbitron-font event-button center">
-            Student Presentation
-        </button>
-
-        
-
-        <button @click = "changeDisplay('content6')"class = "transparent-paragraph orbitron-font event-button center">
-            Game Night
-        </button>
-
-        <button @click = "changeDisplay('content7')" class = "transparent-paragraph orbitron-font event-button center">
-            Professor Talk: North & Smith
-        </button>
-        
-        <button @click = "changeDisplay('content8')"class = "transparent-paragraph orbitron-font event-button center">
-            Scavenger Hunt
-        </button>
-
-        <button @click = "changeDisplay('content10')" class = "transparent-paragraph orbitron-font event-button center">
-            Halloween Event with IDGA
-        </button>
-
-        <button @click = "changeDisplay('content11')" class = "transparent-paragraph orbitron-font event-button center">
-            Alumni Panel
-        </button>
-
-        <button @click = "changeDisplay('content12')" class = "transparent-paragraph orbitron-font event-button center">
-            Professor Talk: ???
-        </button>
-
-        <button @click = "changeDisplay('content13')" class = "transparent-paragraph orbitron-font event-button center">
-            Dead Week Study Sessions
-        </button>
-
-    </ul>
-
-    <div id="content1"  class = "modal">
-        <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "firstEventGraphic">
-            </p>
-
-            <div class = "modal-box">
-                <p class = "orbitron-font modal-paragraph">
-                    Our first meeting of the semester! This meeting will be pretty straight forward-
-                    meet the new officers of the club, get to know what we are about, and connect with other CS majors...
-                    all while having delicious pizza!
-                </p>
-
-                <button class = "modal-button orbitron-font ">
-                    Register
-                </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
-            </div>
-            
+        <div>
+            <button @click = "changeDisplay('content7')" class = "transparent-paragraph orbitron-font event-button center">
+                Professor Talk: North & Smith
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
         </div>
         
-    </div>
+        <div>
+            <button @click = "changeDisplay('content8')"class = "transparent-paragraph orbitron-font event-button center">
+                Scavenger Hunt
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
+        <div>
+            <button @click = "changeDisplay('content10')" class = "transparent-paragraph orbitron-font event-button center">
+                Halloween Event with IDGA
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
+        <div>
+            <button @click = "changeDisplay('content11')" class = "transparent-paragraph orbitron-font event-button center">
+                Alumni Panel
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
+        <div>
+            <button @click = "changeDisplay('content12')" class = "transparent-paragraph orbitron-font event-button center">
+                Professor Talk: ???
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+
+        <div>
+            <button @click = "changeDisplay('content13')" class = "transparent-paragraph orbitron-font event-button center">
+                Dead Week Study Sessions
+            </button>
+            <h1 class = "green-header orbitron-font">TBD</h1>
+        </div>
+    </ul>
 
 
     <div id="content2"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "resumeWorkshopGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content":src = "resumeWorkshopGraphic">
             </p>
 
             <div class = "modal-box">
@@ -197,7 +192,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+    
             </div>
         </div>
     </div>
@@ -205,8 +200,8 @@ function scrollIntoViewCall(targetElement){
 
     <div id="content3"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "appleIIGamesGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "appleIIGamesGraphic">
             </p>
 
             <div class = "modal-box">
@@ -219,15 +214,15 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+               
             </div>
         </div>
     </div>
 
     <div id="content4"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "kickOffGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "kickOffGraphic">
             </p>
 
             <div class = "modal-box">
@@ -240,7 +235,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+         
             </div>
         </div>
     </div>
@@ -249,8 +244,8 @@ function scrollIntoViewCall(targetElement){
 
     <div id="content5"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "studentPresentationGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "studentPresentationGraphic">
             </p>
 
             <div class = "modal-box">
@@ -263,7 +258,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+             
             </div>
         </div>
     </div>
@@ -272,8 +267,8 @@ function scrollIntoViewCall(targetElement){
 
     <div id="content6"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "gameNightGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "gameNightGraphic">
             </p>
 
             <div class = "modal-box">
@@ -286,7 +281,7 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+            
             </div>
         </div>
     </div>
@@ -295,8 +290,8 @@ function scrollIntoViewCall(targetElement){
 
     <div id="content7"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "speakerGraphic">
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "speakerGraphic">
             </p>
 
             <div class = "modal-box">
@@ -309,15 +304,15 @@ function scrollIntoViewCall(targetElement){
                 <button class = "modal-button orbitron-font ">
                     Register
                 </button>
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+            
             </div>
         </div>
     </div>
 
     <div id="content8"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" >
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content">
             </p>
 
             <div class = "modal-box">
@@ -325,15 +320,14 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
 
     <div id="content9"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" >
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content">
             </p>
 
             <div class = "modal-box">
@@ -341,15 +335,14 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
             </div>
         </div>
     </div>
 
     <div id="content10"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" >
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content">
             </p>
 
             <div class = "modal-box">
@@ -357,15 +350,15 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+           
             </div>
         </div>
     </div>
 
     <div id="content11"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" >
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" >
             </p>
 
             <div class = "modal-box">
@@ -373,15 +366,15 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+              
             </div>
         </div>
     </div>
 
     <div id="content12"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" :src = "mysteryProfessorGraphic">
+            <p id = "mystery-professor-graphic"class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" :src = "mysteryProfessorGraphic">
             </p>
 
             <div class = "modal-box">
@@ -390,15 +383,15 @@ function scrollIntoViewCall(targetElement){
                     This paticular individual refuses to tell us...
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outside box to close</p>
+            
             </div>
         </div>
     </div>
 
     <div id="content13"  class = "modal">
         <div class = "modal-content center">
-            <p class = "image-container">
-                <img class = "rounded-edge event-graphic" >
+            <p class = "image-container event-graphic">
+                <img class = "rounded-edge event-content" >
             </p>
 
             <div class = "modal-box">
@@ -406,11 +399,33 @@ function scrollIntoViewCall(targetElement){
                     Sorry! we don't have graphics for this event yet... but we will soon!
                 </p>
 
-                <p class = "orbitron-font modal-paragraph close-text">click outsite box to close</p>
+               
             </div>
         </div>
     </div>
 
+    <div id="recap-modal"  class = "modal">
+        <div id ="recap-content" class = "modal-content center">
+            <div class = "column-content large-header">
+                <h1 class = "orbitron-font">Recap</h1>
+                <section class = "carousel-container center">
+                    <div class = "slider-wrapper">
+                        <div class = "slider">
+                            <img id = 'recap-img-1' :src = "recapImg1">
+                            <img id = 'recap-img-2' :src = "recapImg2">
+                        </div>
+                        <div class ="left-option">
+                            <a class = "arrow-left" @click = "changeImage(0)"></a>
+                        </div>
+                        <div class = "right-option">
+                            <a class = "arrow-right right-option" @click = "changeImage(1)"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            </div>
+        </div>
 
     
 

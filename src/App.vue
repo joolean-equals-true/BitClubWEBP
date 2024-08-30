@@ -9,25 +9,24 @@ const router = useRouter();
   <ul class = "navbar">
   
     <router-link :to ="{name: 'home'}" class = "left-edge"><li>
-      <h2>Home</h2>
+      <h2 class = "orbitron-font">Home</h2>
     </li></router-link>
 
     <router-link :to ="{name: 'officers'}"><li>
-      <h2>Officers</h2>
+      <h2 class = "orbitron-font">Officers</h2>
     </li></router-link>
 
     <router-link :to = "{name: 'events'}"><li>
-      <h2>Events</h2></li></router-link>
+      <h2 class = "orbitron-font">Events</h2></li></router-link>
 
       <router-link :to ="{name: 'about'}"><li>
-      <h2>About</h2>
+      <h2 class = "orbitron-font">About</h2>
     </li></router-link>
 
-    <li class = "right-edge"><h2>Merch</h2></li>
+    <li class = "right-edge"><h2 class = "orbitron-font">Merch</h2></li>
   </ul>
   <router-view/>
 
-  
 </template>
 
 <style scoped>

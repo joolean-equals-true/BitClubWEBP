@@ -48,11 +48,12 @@ function scrollIntoViewCall(targetElement){
 
 
 
-
-    <h1 id = "officer-header" class = "green-header orbitron-font">
+<div class = "column-container">
+    <h1 id = "officer-header" class = "green-header orbitron-font center">
         Meet Our Team
     </h1>
 
+<div>
     <h2 id = "president-label"class = "officer-label transparent-paragraph center orbitron-font">
         President: Jenna Stilling
     </h2>
@@ -85,8 +86,9 @@ function scrollIntoViewCall(targetElement){
    
         We love you Jenna and can't wait to have you as our prez this year!!
     </p>
+</div>
 
-
+<div>
     <h2 id = "vp-label"class = "officer-label transparent-paragraph center orbitron-font">
         Vice President: Julian Moore
     </h2>
@@ -119,18 +121,19 @@ function scrollIntoViewCall(targetElement){
    
         We’re excited to have you as VP this year Julian!
     </p>
+</div>
 
-
+<div>
     <h2 id = "secretary-label"class = "officer-label transparent-paragraph center orbitron-font">
         Secretary: Arrian Taton
     </h2>
     <p class = "image-container officer-container">
         <div class = "fact-container">
-            <h2 class = "orbitron-font"> Favorite Professor:
-            </h2>
-            <h3 class = "orbitron-font">
-                "Don't make me choose!"
+            <h3 class = "orbitron-font"> Favorite Professor:
             </h3>
+            <h2 class = "orbitron-font">
+                "Don't make me choose!"
+            </h2>
         </div>
         <img class = "officer-image":src = secretaryPhoto>
         <div class = "fact-container">
@@ -149,10 +152,10 @@ function scrollIntoViewCall(targetElement){
         she is also a tutor in various computer science courses. 
         We love having you again as an officer this year Ari!
     </p>
-
+</div>
 
     
-
+<div>
     <h2 id = "chaplain-label"class = "officer-label transparent-paragraph center orbitron-font">
         Chaplain: Matthew Jang
     </h2>
@@ -187,10 +190,11 @@ function scrollIntoViewCall(targetElement){
         We love your enthusiasm for God Matthew, and we’re excited to have you as chaplain this year!
 
     </p>
+</div>
         
 
 
-
+<div>
     <h2 id = "social-media-manager-label"class = "officer-label transparent-paragraph center orbitron-font">
         Social Media Manager: Emily Forester
     </h2>
@@ -229,6 +233,9 @@ function scrollIntoViewCall(targetElement){
         the club as my position is new this year 😊
 
     </p>
+</div>
+
+</div>
        
 
 

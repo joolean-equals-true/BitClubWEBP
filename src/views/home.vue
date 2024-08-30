@@ -7,9 +7,18 @@ const eventImg2 = "/public/homePageEventGraphics/first-meeting-2.png"
 const professorImg = "/public/David-North-2.webp"
 const newsImg = "/public/newsImages/pavelDurov.avif"
 const logo = "/public/BITClubLogoTransparent.png"
+let pos = 0;
+let eventImgs = ["event-img-1", "event-img-2", "event-img-3"]
 
-const eventImgs = ["event-img-1", "event-img-2", "event-img-3"]
-
+function changeImage(direction){
+  if(direction == 1 && pos < eventImgs.length){
+    pos++;
+  }
+  else if (pos >0){
+    pos--;
+  }
+  scrollIntoViewCall(eventImgs.at(pos))
+}
 
 const promoImg = "/public/LIandLeftwhich.jpg"
 defineProps({
@@ -70,10 +79,11 @@ function scrollIntoViewCall(targetElement){
               <img id = 'event-img-2' :src = "eventImg2">
               <img id = 'event-img-3' :src = "eventImg3">
             </div>
-            <div class ="slider-nav">
-              <i class = "arrow-right"></i>
-              <a @click = "scrollIntoViewCall('event-img-2')"></a>
-              <a @click = "scrollIntoViewCall('event-img-3')"></a>
+            <div class ="left-option">
+             <a class = "arrow-left" @click = "changeImage(0)"></a>
+            </div>
+            <div class = "right-option">
+             <a class = "arrow-right right-option" @click = "changeImage(1)"></a>
             </div>
         </div>
     </section>
@@ -89,7 +99,7 @@ function scrollIntoViewCall(targetElement){
   </div>
 
 
-<div id = "rightDiv" class = "column-container justify-start">
+<div id = "leftDiv" class = "column-container justify-start">
   <ul class = "right-slanted-light-grey-banner">
     <h1 class = "orbitron-font">
       Quote of the Day:

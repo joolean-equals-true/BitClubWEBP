@@ -183,6 +183,10 @@ a{
   text-decoration: none;
 }
 
+button:hover{
+
+}
+
 /*Speacial Classes--------------*/
 
 /*ICONS*/
@@ -192,11 +196,21 @@ a{
 .arrow-right {
   width: 0; 
   height: 0; 
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  
-  border-left: 60px solid green;
+  border-top: 2.8vw solid transparent;
+  border-bottom: 2.8vw solid transparent;
+  border-left: 2.8vw solid rgb(53, 53, 53);
+  transition: 0.3s;
 }
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 2.8vw solid transparent;
+  border-bottom: 2.8vw solid transparent;
+  border-right: 2.8vw solid rgb(53, 53, 53);
+  transition: 0.3s
+}
+
 /*carousel-container*/
 /*this container is meant to hold a multitude of images.*/
 .carousel-container{
@@ -230,22 +244,46 @@ a{
   position: absolute;
   bottom: 1.25rem;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 1;
+  
 }
 
 .slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: rgb(53, 53, 53);
+  
+}
+
+.left-option{
+  position: absolute;
+  left: 0%;
+  top: 38%;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.left-option a{
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
 
-.slider-nav a:hover{
-  opacity: 100%;
-  background-color: rgb(87, 87, 87);
+.right-option{
+  position: absolute;
+  right: 0%;
+  top: 38%;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.right-option a{
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.left-option :hover{
+  border-right: 2.8vw solid rgb(96, 96, 96);
+  cursor: pointer;
+}
+
+.right-option :hover{
+  border-left: 2.8vw solid rgb(96, 96, 96);
   cursor: pointer;
 }
 
@@ -314,6 +352,7 @@ this class basically does what it says. It turns a page into a scroll container.
 .navbar h2{
   text-decoration: none;
   transition: 0.3s;
+  font-size: 1.4vw;
 }
 .navbar a{
   transition: 0.3s
@@ -370,7 +409,7 @@ You can change the height though! the "child" class here is needed to unskew the
   width: max-content;
   padding-right: 2vw;
   padding-left: 2vw;
-  transform:  translateX(-6vw) skewX(-40deg);
+  transform:  translateX(-8vw) skewX(-40deg);
   transition: 0.5s;
  
 }
@@ -381,7 +420,7 @@ You can change the height though! the "child" class here is needed to unskew the
   padding-right: 1.4vw;
   padding-left: 1.4vw;
   justify-content:center;
-  transform: translateX(1.3vw) skew(40deg);
+  transform: translateX(3.3vw) skew(40deg);
   transition: 0.5s;
  
 }
@@ -395,6 +434,17 @@ You can change the height though! the "child" class here is needed to unskew the
   transform: skew(-40deg);
   margin: 0.4rem;
   font-size: 1.6vw;
+}
+
+.left-slanted-light-grey-banner h2{
+  transform: skew(40deg);
+  margin: 0.4rem;
+  font-size: 1.18vw;
+}
+.right-slanted-light-grey-banner h2{
+  transform: skew(-40deg);
+  margin: 0.4rem;
+  font-size: 1.18vw;
 }
 
 /*yeah I copied your code. what are you gonna do about it?*/
@@ -450,8 +500,8 @@ You can change the height though! the "child" class here is needed to unskew the
 .officer-label{
   font-size: 3vw;
   width:fit-content;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 .officer-professor{
   max-width: 17vw ;
@@ -470,7 +520,7 @@ page right now. */
 .officer-description{
   width: 90%;
   font-size: 1.8vw;
-  margin-bottom: 90px;
+  margin-bottom: 6vw;
   font-weight: 800%;
   text-align: center; 
 }
@@ -579,15 +629,12 @@ page right now. */
 }
 
 .event-button{
-  font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  transition: 0.5s;
+ 
 }
 
 /*I made this because I did not want to continue making id's for headers.*/
 .large-header{
-  font-size: 4.5vw;
+  font-size: 1.3vw;
 }
 
 .rounded-edge{
@@ -620,8 +667,9 @@ page right now. */
   background-color: rgb(53, 53, 53);
   border-radius: 30px;
   border-color: azure;
-  width: 60rem;
-  height: auto;
+  max-width: 80vw;
+  max-height: 70%;
+  overflow-y: auto;
   justify-items: left;
 
 }
@@ -630,7 +678,7 @@ page right now. */
   flex-direction: column;
   padding-bottom: 40px;
   padding-top: 40px;
-
+  justify-content: center;
   align-items: center;
 }
 .modal-button{
@@ -650,26 +698,53 @@ page right now. */
 }
 .modal-paragraph{
   font-size: 1.5vw;
+  text-align: center;
 }
 .close-text{
-  animation-name: fade-in-fade-out;
-  animation-duration: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
   padding: 0;
  
 }
 .event-graphic{
-  max-width: 27vw;
+  aspect-ratio: 2/2;
+  display: flex;
+}
+.event-content{
+  flex: 1 1 100%;
+  max-width: 40vw;
+  
 }
 
 .event-list{
   display: flex;
-  flex-direction:column;
-  padding: 0px;
+  flex-direction: column;
+  justify-content:space-around;
+  overflow-y: hidden;
+
+  padding-left: 20%;
+  padding-right: 20%
+ }
+ .event-list div{
+  display:flex;
+  justify-content: space-between;
+ }
+ .event-list button{
+  font-weight: 600;
+  font-size: 2vw;
+  width: max-content;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 0;
+  margin-right: 0;
+  transition: 0.5s;
+ }
+ .event-list h1{
+  transform: translateY(1.4vh);
+    font-size: 2vw;
+    margin: 0;
+    
  }
  
- .event-list :hover{
+ .event-list button:hover{
    animation-name: enlarge-button;
    animation-direction:normal;
    animation-duration: 0.5s;
@@ -720,6 +795,12 @@ all images need to be the same width and height before they are combined.*/
   margin-bottom: 1rem;
 }
 
+#rightDiv{
+  transform: translateX(2vw)
+}
+#leftDiv{
+  transform: translateX(-2vw)
+}
 
 /*this div contains the paragraph and image for the news on the home page. Since everything flows centered, I needed
 to reposition it in the right place.*/
@@ -747,7 +828,7 @@ to reposition it in the right place.*/
 
 /*Officer Page tags-------------------*/
 #officer-header{
-  font-size: 6vw;
+  font-size: 3vw;
 }
 
 
@@ -798,8 +879,9 @@ to reposition it in the right place.*/
 
 /*Event page id's------------------------------------------*/
 #events-label{
-  font-size: 7vw;
-
+  font-size: 3vw;
+  transform: translateX(13.5vw);
+  margin-top: 8vh;
 }
 #next-event-div{
   width: 26vw;
@@ -814,10 +896,16 @@ to reposition it in the right place.*/
 #event-container-1{
   justify-content: flex-start;
 }
+#recap-div{
+  display: flex;
+  padding-left: 4%;
+  padding-right: 4%;
+}
 
-#next-event-button{
+#recap-button{
   margin-top: 0;
   margin-bottom: 0;
+  
 }
 
 /*Event Graphics*/
@@ -826,9 +914,24 @@ to reposition it in the right place.*/
 }
 
 
-/*temporary ID's... delete these after production*/
-#content1{
+#recap-banner{
+  transform: translateX(-2vw) skew(-40deg);
+}
 
+#mystery-professor-graphic{
+  aspect-ratio: 4/2;
+}
+
+#recap-modal{
+  padding-top: 10%;
+}
+
+#recap-content{
+  width: fit-content;
+  padding-top: 0;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
 }
 
 /*media queries*/
