@@ -8,6 +8,7 @@ At some point, you will need to make different font sizes and widths for differe
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
 /*
 Color Pallette:
 rgb(26, 26, 26);
@@ -160,6 +161,8 @@ p{
   margin: 18px;
   display: block;
   padding: 12px;
+  font-size: 1.1vw;
+  font-weight: 700;
 }
 
 button {
@@ -167,7 +170,7 @@ button {
   background-color: rgb(53, 53, 53);
   color: azure;
   font-size: 2vw;
-  padding: 10px;
+  padding: 0.48rem;
   border-style: none;
   transition: 0.5s;
 }
@@ -182,7 +185,18 @@ a{
 
 /*Speacial Classes--------------*/
 
+/*ICONS*/
 
+
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  
+  border-left: 60px solid green;
+}
 /*carousel-container*/
 /*this container is meant to hold a multitude of images.*/
 .carousel-container{
@@ -251,8 +265,8 @@ this class basically does what it says. It turns a page into a scroll container.
   flex: 1 0 100%;
   object-fit: cover;
   width: 40rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 1.4vw;
+  border-top-right-radius: 1.4vw;
 }
 .home-page-image-container{
   display: flex;
@@ -269,14 +283,18 @@ this class basically does what it says. It turns a page into a scroll container.
 /*Navbar class. just a class for the navbar. don't expect me to make to many more comments like this...*/
 .navbar {
   background-color: rgb(53, 53, 53);
-  top: 0px;
   display: flex;
   align-items: center;
   justify-content:center;
-  margin: 0px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  margin-top: 1vw;
+  margin-bottom: 0;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 2rem;
   transition: 0.5s;
+  width: max-content;
+  padding: 0;
+
 }
 
 .no-margins{
@@ -290,15 +308,17 @@ this class basically does what it says. It turns a page into a scroll container.
 }
 
 .navbar li{
-  padding-left: 40px;
-  padding-right: 40px;
-  transition-duration: 0.5s;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 .navbar h2{
   text-decoration: none;
   transition: 0.3s;
 }
-.navbar li:hover{
+.navbar a{
+  transition: 0.3s
+}
+.navbar a:hover{
   
   animation-name: navbarHover;
   animation-direction: alternate;
@@ -306,13 +326,19 @@ this class basically does what it says. It turns a page into a scroll container.
   background-color: rgb(87, 87, 87);
 }
 
-.navbar li:active{
-    animation-direction: alternate;
-    animation-name: selected;
-    animation-duration: 0.1s;
-
+.navbar a:active{
+  background-color: rgb(141, 141, 141);
 }
 
+.left-edge{
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.right{
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
 
 
 
@@ -340,40 +366,42 @@ would rather make a class that has that specification. This will just update the
 how to skew a shape without transfroming the entire object, it is meant to hang onto the edge of the screen.
 You can change the height though! the "child" class here is needed to unskew the text.*/
 .left-slanted-light-grey-banner{
-  background-color: rgb(87, 87, 87);
   background-image: linear-gradient(to right, rgb(68, 68, 68),rgb(118, 118, 118));
-  width: fit-content;
-  padding-right: 50px;
-  padding-left: 50px;
+  width: max-content;
+  padding-right: 2vw;
+  padding-left: 2vw;
   transform:  translateX(-6vw) skewX(-40deg);
+  transition: 0.5s;
  
 }
 .right-slanted-light-grey-banner{
   
   background-image: linear-gradient(to left, rgb(68, 68, 68),rgb(118, 118, 118));
-  width:fit-content;
-  padding-right: 50px;
-  padding-left: 50px;
+  width:17.2vw;
+  padding-right: 1.4vw;
+  padding-left: 1.4vw;
   justify-content:center;
-  transform: translateX(3vw) skew(40deg);
+  transform: translateX(1.3vw) skew(40deg);
   transition: 0.5s;
  
 }
 
 .left-slanted-light-grey-banner h1{
   transform: skew(40deg);
-  margin: 10px;
-  font-size: 2vw;
+  margin: 0.4rem;
+  font-size: 1.6vw;
 }
 .right-slanted-light-grey-banner h1{
   transform: skew(-40deg);
-  margin: 10px;
-  font-size: 1.5vw;
+  margin: 0.4rem;
+  font-size: 1.6vw;
 }
 
 /*yeah I copied your code. what are you gonna do about it?*/
 .image-container{
   text-align: center;
+
+  margin: 0;
   
 }
 
@@ -386,13 +414,15 @@ You can change the height though! the "child" class here is needed to unskew the
   display: flex;
   flex-direction: column;
   width:fit-content;
+  justify-content: left;
+
 }
 
 .description-box{
   margin:0px;
   height: auto;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 1.4vw;
+  border-bottom-right-radius: 1.4vw;
   display: flex;
   justify-content: center;
   background-color: rgb(87, 87, 87);
@@ -401,7 +431,7 @@ You can change the height though! the "child" class here is needed to unskew the
 
 .about-image{
   max-width: 100%;
-  border-radius: 30px;
+  border-radius: 3vw;
 }
 .officer-image{
   max-width: 22vw;
@@ -472,8 +502,11 @@ page right now. */
 /*flex styles. these are so I can apply them without messing up all the other elements*/
 .justify-start{
   justify-content: flex-start;
-  padding-top: 5rem;
+  padding-top: 3rem;
   align-items: center;
+}
+.top-padding{
+  padding-top: 3rem
 }
 
 .fact-container{
@@ -656,7 +689,7 @@ page right now. */
 /*Bitclub logo ID: this id exists becuase I need to specifically change the bitclub logo, and nothing else needs this styling.
 it has a max width and is meant to be put in an "image container" */
 #bitclublogo{
-  max-width: 70%;
+  max-width: 80%;
   transition: 0.5s;
 }
 /*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
@@ -683,7 +716,7 @@ all images need to be the same width and height before they are combined.*/
 #nextEventHeader{
   font-size: 3vw;
   text-shadow: 100px;
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -810,28 +843,18 @@ to reposition it in the right place.*/
 
 /*News and Quote Divs*/
 @media (max-width: 1175px){
-    .right-slanted-light-grey-banner {
-      transform: translateX(60px) skew(40deg)
-    }
+ 
   }
 
 @media (max-width: 1100px){
 
-  .description-box{
-    font-size: 1.2vw;
-  }
   /*I'll have to comment this out later. so I'll organize what styles apply to what and put all the media 
   queries in order. Instead of making more, I should use the
   cs principle of 'resuse' This style here is for the events page.*/
-  #recap-image{
-    max-width: 70%;
-  }
+
 
   /*this is for the short description underneath the recap-image on the events page.*/
-  .fit-description{
-    font-size: 3vw;
-    width: 80%;
-  }
+
 
   /*this is for the event buttons that are underneath the 'All events in order' label*/
   
@@ -841,9 +864,6 @@ to reposition it in the right place.*/
   }
 
  /*this style is for the contianer on the about page holding all the elements*/
-  #middle-about-div{
-    max-width: 50%;
-  }
   #about-description{
     width: 30vw;
   }
@@ -875,22 +895,12 @@ Slanted Banner*/
   #bitclublogo{
     max-width: 85%;
   }
-  .right-slanted-light-grey-banner h1{
-    font-size: 1.5vw;
-  }
-  .right-slanted-light-grey-banner{
-    padding-left: 20px;
-    padding-right: 20px;
-    transform: translateX(30px) skew(40deg);
-  }
+ 
 
 
 }
 
   @media (max-width: 1000px){
-    .right-slanted-light-grey-banner{
-      transform: translateX(50px) skew(40deg)
-    }
 
     .modal-content{
       width: 80vw;
@@ -904,10 +914,6 @@ Slanted Banner*/
   }
 
 @media (max-width: 890px){
-  .right-slanted-light-grey-banner{
-    transform: translateX(30px) skew(40deg)
-  }
-
   /*this is for the next event banner on the events page.*/
   #next-event-button{
     font-size: 1.8vw;

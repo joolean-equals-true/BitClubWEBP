@@ -8,7 +8,7 @@ const professorImg = "/public/David-North-2.webp"
 const newsImg = "/public/newsImages/pavelDurov.avif"
 const logo = "/public/BITClubLogoTransparent.png"
 
-
+const eventImgs = ["event-img-1", "event-img-2", "event-img-3"]
 
 
 const promoImg = "/public/LIandLeftwhich.jpg"
@@ -38,7 +38,7 @@ function scrollIntoViewCall(targetElement){
 
 <div id  = "rightDiv" class = "column-container justify-start">
   <ul class = "left-slanted-light-grey-banner"> 
-    <h1> 
+    <h1 class = "orbitron-font"> 
       News:
     </h1>
   </ul>
@@ -48,15 +48,14 @@ function scrollIntoViewCall(targetElement){
         <img class = "home-page-image" :src = newsImg>
     
       </p>
-    <p id = "newsDescription" class = "rubik-font description-box">
-        Pavel Durov, owner of Telegram, gets arrested in France,
-        facing acussations of being "passive" with cyber crimes being
-        committed on his platform...
+    <p id = "newsDescription" class = "orbitron-font description-box">
+        Pavel Durov (owner of Telegram) arrested in France for being passive about illegal
+        activity on his platform...
     </p>
   </div>
 </div>
 
-<div id = "middleDiv" class ="column-container">
+<div id = "middleDiv" class ="column-container top-padding">
   <p class = "image-container">
     <img id = "bitclublogo" :src = logo>
   </p>
@@ -72,7 +71,7 @@ function scrollIntoViewCall(targetElement){
               <img id = 'event-img-3' :src = "eventImg3">
             </div>
             <div class ="slider-nav">
-              <a @click = "scrollIntoViewCall('event-img-1')"></a>
+              <i class = "arrow-right"></i>
               <a @click = "scrollIntoViewCall('event-img-2')"></a>
               <a @click = "scrollIntoViewCall('event-img-3')"></a>
             </div>
@@ -80,7 +79,7 @@ function scrollIntoViewCall(targetElement){
     </section>
     
     <div id ="register-button">
-      <button id = "button"class = "rubik-font"> 
+      <button id = "button"class = "orbitron-font"> 
         Register
       </button>
     </div>
@@ -92,7 +91,7 @@ function scrollIntoViewCall(targetElement){
 
 <div id = "rightDiv" class = "column-container justify-start">
   <ul class = "right-slanted-light-grey-banner">
-    <h1>
+    <h1 class = "orbitron-font">
       Quote of the Day:
     </h1>
   </ul>
@@ -101,7 +100,7 @@ function scrollIntoViewCall(targetElement){
     <p class ="home-page-image-container">
       <img class = "home-page-image" :src = professorImg>
     </p>
-    <p id = "quoteDescription"class = "rubik-font description-box">
+    <p id = "quoteDescription"class = "orbitron-font description-box">
        "I don't know If I want you to know what you can do at midnight." - North
     </p>
   </div>
@@ -121,8 +120,6 @@ function scrollIntoViewCall(targetElement){
 
 
 
-
-=
 
 
 

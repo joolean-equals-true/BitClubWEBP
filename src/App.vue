@@ -8,17 +8,22 @@ const router = useRouter();
 <template>
   <ul class = "navbar">
   
-    <li>
-      <router-link :to ="{name: 'home'}"><h2>Home</h2></router-link>
-    </li>
-    <li>
-      <router-link :to ="{name: 'officers'}"><h2>Officers</h2></router-link>
-    </li>
-    <li><router-link :to = "{name: 'events'}"><h2>Events</h2></router-link></li>
-    <li>
-      <router-link :to ="{name: 'about'}"><h2>About</h2></router-link>
-    </li>
-    <li><h2>Merch</h2></li>
+    <router-link :to ="{name: 'home'}" class = "left-edge"><li>
+      <h2>Home</h2>
+    </li></router-link>
+
+    <router-link :to ="{name: 'officers'}"><li>
+      <h2>Officers</h2>
+    </li></router-link>
+
+    <router-link :to = "{name: 'events'}"><li>
+      <h2>Events</h2></li></router-link>
+
+      <router-link :to ="{name: 'about'}"><li>
+      <h2>About</h2>
+    </li></router-link>
+
+    <li class = "right-edge"><h2>Merch</h2></li>
   </ul>
   <router-view/>
 
