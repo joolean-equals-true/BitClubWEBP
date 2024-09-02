@@ -634,7 +634,7 @@ page right now. */
 
 /*I made this because I did not want to continue making id's for headers.*/
 .large-header{
-  font-size: 1.3vw;
+  font-size: 2.5vw;
 }
 
 .rounded-edge{
@@ -710,7 +710,8 @@ page right now. */
 }
 .event-content{
   flex: 1 1 100%;
-  max-width: 40vw;
+  max-width: 36vw;
+  object-fit: cover;
   
 }
 
@@ -923,7 +924,7 @@ to reposition it in the right place.*/
 }
 
 #recap-modal{
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 #recap-content{
@@ -932,6 +933,10 @@ to reposition it in the right place.*/
   padding-left: 4%;
   padding-right: 4%;
   padding-bottom: 4%;
+}
+
+#recap-container{
+  max-width: 120vw;
 }
 
 /*media queries*/

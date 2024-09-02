@@ -408,7 +408,7 @@ function scrollIntoViewCall(targetElement){
         <div id ="recap-content" class = "modal-content center">
             <div class = "column-content large-header">
                 <h1 class = "orbitron-font">Recap</h1>
-                <section class = "carousel-container center">
+                <section  id = "recap-container"class = "carousel-container center">
                     <div class = "slider-wrapper">
                         <div class = "slider">
                             <img id = 'recap-img-1' :src = "recapImg1">
