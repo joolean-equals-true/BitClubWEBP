@@ -41,6 +41,7 @@ function scrollIntoViewCall(targetElement){
 </script>
 
 <template>
+  <title>Home</title>
 
 
 <div class = "row-container">

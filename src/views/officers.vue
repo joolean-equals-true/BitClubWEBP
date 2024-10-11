@@ -26,6 +26,7 @@ function scrollIntoViewCall(targetElement){
 </script>
 
 <template>
+    <title>Officers</title>
 
     <ul class = "officer-navbar">
         <h3 id = "number1"@click = "scrollIntoViewCall('president-label')">

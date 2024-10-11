@@ -59,6 +59,7 @@ function scrollIntoViewCall(targetElement){
 
 
 <template >
+    <title>Events</title>
 
     <div id = "event-container-1" class = "row-container">
         <div id="next-event-div" class = "column-container"> 
@@ -227,9 +228,11 @@ function scrollIntoViewCall(targetElement){
 
             <div class = "modal-box">
                 <p class = "orbitron-font modal-paragraph">
-                    Come to the Kick Off Party! We'll have board games, yard games, food, and more! It'll be a great place to connect
-                    with people and meet the CS community. It'll be at Professor North's house at 6:00 pm. If you can't drive there,
-                    don't worry! we can carpool you there if need be! Make sure to register for this fun event!
+                    Hey everyone, I hope you are doing well! Our annual Kick Off Party is around the corner, 
+                    and we would love to Come to the Kick Off Party! We'll have board games, yard games, food, and more! It'll be a great place to connect
+                    with people and meet the CS community. It'll be at Professor North's house (3113 Fisher Rd, Edmond OK 73013) 
+                    at 6:00 pm, September 20 (next friday, a week from now). If you can't drive there,
+                    don't worry! We can carpool you there if need be! Make sure to register for this fun event in the form below!
                 </p>
 
                 <button class = "modal-button orbitron-font ">

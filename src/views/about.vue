@@ -10,6 +10,7 @@ const lanpartyPhoto = "/public/aboutImages/lanpartyPhoto.jpg"
 </script>
 
 <template>
+    <title>About</title>
 
 <div id = "about-container"class = "row-container">
 
@@ -25,7 +26,7 @@ const lanpartyPhoto = "/public/aboutImages/lanpartyPhoto.jpg"
 
     <div id = "middle-about-div" class = "column-container about-div">
         <h1 id = "about-header"class = "green-header orbitron-font center">Who we Are</h1>
-        <p id= "about-description"class = "orbitron-font center">
+        <p id= "about-description"class = "orbitron-font">
         Bit Club is the official ACM (Math and Computer Science) chapter for OC, but everyone at OC is welcome!
 
         <br>

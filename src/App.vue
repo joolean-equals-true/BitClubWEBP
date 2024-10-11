@@ -12,16 +12,18 @@ const router = useRouter();
       <h2 class = "orbitron-font">Home</h2>
     </li></router-link>
 
-    <router-link :to ="{name: 'officers'}"><li>
-      <h2 class = "orbitron-font">Officers</h2>
+   
+    <router-link :to ="{name: 'about'}"><li>
+      <h2 class = "orbitron-font">About</h2>
     </li></router-link>
 
     <router-link :to = "{name: 'events'}"><li>
       <h2 class = "orbitron-font">Events</h2></li></router-link>
 
-      <router-link :to ="{name: 'about'}"><li>
-      <h2 class = "orbitron-font">About</h2>
+      <router-link :to ="{name: 'officers'}"><li>
+      <h2 class = "orbitron-font">Officers</h2>
     </li></router-link>
+     
 
     <li class = "right-edge"><h2 class = "orbitron-font">Merch</h2></li>
   </ul>

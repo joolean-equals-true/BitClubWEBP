@@ -522,7 +522,7 @@ page right now. */
   font-size: 1.8vw;
   margin-bottom: 6vw;
   font-weight: 800%;
-  text-align: center; 
+  text-align: left; 
 }
 
 .officer-container{
@@ -594,7 +594,7 @@ page right now. */
   font-size: 1.6vw;
   margin-bottom: 5vw;
   margin-top: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .officer-navbar{
@@ -817,7 +817,7 @@ to reposition it in the right place.*/
 
 
 #about-description{
-  text-align: center;
+  text-align: left;
   font-size: 1.4vw;
   font-weight: 700;
   width: 50vw;
