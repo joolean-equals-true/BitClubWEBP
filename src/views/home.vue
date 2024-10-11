@@ -53,14 +53,13 @@ function scrollIntoViewCall(targetElement){
     </h1>
   </ul>
 
-  <div id = "newsDiv" class = "image-paragraph-container">
+  <div class = "image-paragraph-container">
       <p class = "home-page-image-container">
         <img class = "home-page-image" :src = newsImg>
     
       </p>
-    <p id = "newsDescription" class = "orbitron-font description-box">
-        Pavel Durov (owner of Telegram) arrested in France for being passive about illegal
-        activity on his platform...
+    <p id = "newsDescription" class = "orbitron-font description-box drop-shadow">
+        Pavel Durov (owner of Telegram) arrested for illegal activity on his platform...
     </p>
   </div>
 </div>
@@ -111,7 +110,7 @@ function scrollIntoViewCall(targetElement){
     <p class ="home-page-image-container">
       <img class = "home-page-image" :src = professorImg>
     </p>
-    <p id = "quoteDescription"class = "orbitron-font description-box">
+    <p id = "quoteDescription"class = "orbitron-font description-box drop-shadow">
        "I don't know If I want you to know what you can do at midnight." - North
     </p>
   </div>

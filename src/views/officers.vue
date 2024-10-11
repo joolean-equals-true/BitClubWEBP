@@ -59,18 +59,18 @@ function scrollIntoViewCall(targetElement){
         President: Jenna Stilling
     </h2>
     <p class = "image-container officer-container">
-        <div class = "fact-container">
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font"> Favorite Professor:
             </h2>
             <h3 class = "orbitron-font">
                 North
             </h3>
-            <p class = "image-container no-margins no-padding">
+            <p class = "image-container no-margins no-padding ">
                 <img class = "officer-professor" :src = presidentProfessor>
             </p>
         </div>
-        <img class = "officer-image":src = presidentPhoto>
-        <div class = "fact-container">
+        <img class = "officer-image drop-shadow":src = presidentPhoto>
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font">
                 Favorite Class:
             </h2>
@@ -94,7 +94,7 @@ function scrollIntoViewCall(targetElement){
         Vice President: Julian Moore
     </h2>
     <p class = "image-container officer-container">
-        <div class = "fact-container">
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font"> Favorite Professor:
             </h2>
             <h3 class = "orbitron-font">
@@ -104,8 +104,8 @@ function scrollIntoViewCall(targetElement){
                 <img class = "officer-professor" :src = vpProfessor>
             </p>
         </div>
-        <img class = "officer-image":src = vpPhoto>
-        <div class = "fact-container">
+        <img class = "officer-image drop-shadow":src = vpPhoto>
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font">
                 Favorite Class:
             </h2>
@@ -129,15 +129,15 @@ function scrollIntoViewCall(targetElement){
         Secretary: Arrian Taton
     </h2>
     <p class = "image-container officer-container">
-        <div class = "fact-container">
+        <div class = "fact-container drop-shadow">
             <h3 class = "orbitron-font"> Favorite Professor:
             </h3>
             <h2 class = "orbitron-font">
                 "Don't make me choose!"
             </h2>
         </div>
-        <img class = "officer-image":src = secretaryPhoto>
-        <div class = "fact-container">
+        <img class = "officer-image drop-shadow":src = secretaryPhoto>
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font">
                 Favorite Class:
             </h2>
@@ -161,7 +161,7 @@ function scrollIntoViewCall(targetElement){
         Chaplain: Matthew Jang
     </h2>
     <p class = "image-container officer-container">
-        <div class = "fact-container">
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font"> Favorite Professor:
             </h2>
             <h3 class = "orbitron-font">
@@ -171,8 +171,8 @@ function scrollIntoViewCall(targetElement){
                 <img class = "officer-professor" :src = chaplainProfessor>
             </p>
         </div>
-        <img class = "officer-image":src = chaplainPhoto>
-        <div class = "fact-container">
+        <img class = "officer-image drop-shadow":src = chaplainPhoto>
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font">
                 Favorite Class:
             </h2>
@@ -200,7 +200,7 @@ function scrollIntoViewCall(targetElement){
         Social Media Manager: Emily Forester
     </h2>
     <p class = "image-container officer-container">
-        <div class = "fact-container">
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font"> Favorite Professor:
             </h2>
             <h3 class = "orbitron-font">
@@ -210,8 +210,8 @@ function scrollIntoViewCall(targetElement){
                 <img class = "officer-professor" :src = socialMediaManagerProfessor>
             </p>
         </div>
-        <img class = "officer-image":src = socialMediaManagerPhoto>
-        <div class = "fact-container">
+        <img class = "officer-image drop-shadow":src = socialMediaManagerPhoto>
+        <div class = "fact-container drop-shadow">
             <h2 class = "orbitron-font">
                 Favorite Class:
             </h2>

@@ -51,6 +51,7 @@ the class below helps to visualize this. other than that it has no purpose
   }
   to{
     font-size:2.5vw;
+ 
     color: rgb(0, 255, 0);
   }
 }
@@ -188,6 +189,12 @@ button:hover{
 }
 
 /*Speacial Classes--------------*/
+/*drop shadow:
+this adds a drop shadow (that I am comforable with to the element*/
+.drop-shadow{
+  box-shadow: 0px 5px 5px 0px black;
+}
+
 
 /*ICONS*/
 
@@ -465,18 +472,21 @@ You can change the height though! the "child" class here is needed to unskew the
   flex-direction: column;
   width:fit-content;
   justify-content: left;
+ 
+  
 
 }
 
 .description-box{
   margin:0px;
-  height: auto;
+  max-height: 10vh;
   border-bottom-left-radius: 1.4vw;
   border-bottom-right-radius: 1.4vw;
   display: flex;
   justify-content: center;
   background-color: rgb(87, 87, 87);
   width:fit-content;
+ 
 }
 
 .about-image{
@@ -628,10 +638,6 @@ page right now. */
   background-color: rgba(109, 109, 109, 0.5);
 }
 
-.event-button{
- 
-}
-
 /*I made this because I did not want to continue making id's for headers.*/
 .large-header{
   font-size: 2.5vw;
@@ -750,6 +756,7 @@ page right now. */
    animation-direction:normal;
    animation-duration: 0.5s;
    font-size: 2.5vw;
+
    color: rgb(0, 255, 0);
    cursor: pointer;
  }
