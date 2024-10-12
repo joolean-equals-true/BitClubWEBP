@@ -417,14 +417,18 @@ function scrollIntoViewCall(targetElement){
                             <img id = 'recap-img-1' :src = "recapImg1">
                             <img id = 'recap-img-2' :src = "recapImg2">
                         </div>
-                        <div class ="left-option">
-                            <a class = "arrow-left" @click = "changeImage(0)"></a>
-                        </div>
-                        <div class = "right-option">
-                            <a class = "arrow-right right-option" @click = "changeImage(1)"></a>
-                        </div>
+                        <svg class = "arrow-left"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(0)">
+                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+                        </svg>
+                        <svg class = "arrow-right"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(1)">
+                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+                        </svg>
                     </div>
                 </section>
+                <p class = "orbitron-font recap-paragraph center">
+                        We had a lot of fun at this event, just getting to know you all! I if you missed
+                        this event, don't worry, there are more on the way!
+                    </p>
             </div>
             
             </div>

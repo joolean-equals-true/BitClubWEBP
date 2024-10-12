@@ -201,21 +201,28 @@ this adds a drop shadow (that I am comforable with to the element*/
 
 
 .arrow-right {
-  width: 0; 
-  height: 0; 
-  border-top: 2.8vw solid transparent;
-  border-bottom: 2.8vw solid transparent;
-  border-left: 2.8vw solid rgb(53, 53, 53);
-  transition: 0.3s;
+  position: absolute;
+  fill: rgb(53, 53, 53);
+  right: -5%;
+ top: 38%;
+ width: 30%;
+ height: 30%;
+ transform: rotate(180deg);
+ opacity: 0.75;
+  transition: opacity ease 250ms;
 }
 
 .arrow-left {
-  width: 0; 
-  height: 0; 
-  border-top: 2.8vw solid transparent;
-  border-bottom: 2.8vw solid transparent;
-  border-right: 2.8vw solid rgb(53, 53, 53);
-  transition: 0.3s
+  position: absolute;
+  fill: rgb(53, 53, 53);
+  left: -5%;
+ top: 38%;
+ width: 30%;
+ height: 30%;
+ opacity: 0.75;
+  transition: opacity ease 250ms;
+ 
+
 }
 
 /*carousel-container*/
@@ -228,6 +235,7 @@ this adds a drop shadow (that I am comforable with to the element*/
   position: relative;
   max-width: 35vw;
   margin: 0 auto;
+  border-radius: 2.5rem;
 }
 
 .slider{
@@ -255,44 +263,21 @@ this adds a drop shadow (that I am comforable with to the element*/
   
 }
 
-.slider-nav a {
-  
-}
-
-.left-option{
-  position: absolute;
-  left: 0%;
-  top: 38%;
-  display: flex;
-  column-gap: 1rem;
-}
-
-.left-option a{
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
-
-.right-option{
-  position: absolute;
-  right: 0%;
-  top: 38%;
-  display: flex;
-  column-gap: 1rem;
-}
-
 .right-option a{
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
-.left-option :hover{
-  border-right: 2.8vw solid rgb(96, 96, 96);
+.arrow-left :hover{
+  fill: rgb(96, 96, 96);
   cursor: pointer;
 }
 
-.right-option :hover{
-  border-left: 2.8vw solid rgb(96, 96, 96);
+.arrow-right :hover{
+  fill: rgb(96, 96, 96);
   cursor: pointer;
 }
+
+
 
 /*scroll-container:
 this class basically does what it says. It turns a page into a scroll container.*/
@@ -368,7 +353,7 @@ this class basically does what it says. It turns a page into a scroll container.
   
   animation-name: navbarHover;
   animation-direction: alternate;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   background-color: rgb(87, 87, 87);
 }
 
@@ -427,7 +412,7 @@ You can change the height though! the "child" class here is needed to unskew the
   padding-right: 1.4vw;
   padding-left: 1.4vw;
   justify-content:center;
-  transform: translateX(3.3vw) skew(40deg);
+  transform: translateX(3.6vw) skew(40deg);
   transition: 0.5s;
  
 }
@@ -558,6 +543,7 @@ page right now. */
   transition: 0.5s;
  
 }
+
 
 /*flex styles. these are so I can apply them without messing up all the other elements*/
 .justify-start{
@@ -766,6 +752,11 @@ page right now. */
   justify-content: start;
 }
 
+.recap-paragraph{
+  max-width: 50%;
+
+}
+
 
 /*ID's---------------------------------*/
 
@@ -778,8 +769,11 @@ it has a max width and is meant to be put in an "image container" */
 /*promoImg: t50his is for the promotional image on the home page... it will be multiple images combined into to one to emulate a 
 "scrolling" effect.
 all images need to be the same width and height before they are combined.*/
+/*home-page-container
+this container represents the home page, and will be used for media queries later.*/
+#home-page-container{
 
-
+}
 #register-button :hover{
   animation-name: navBarHover;
   animation-duration: 0.5s;
@@ -794,6 +788,7 @@ all images need to be the same width and height before they are combined.*/
   justify-content: center;
   margin-top: 1vw;
 }
+
 
 
 #nextEventHeader{
@@ -935,11 +930,13 @@ to reposition it in the right place.*/
 }
 
 #recap-content{
-  width: fit-content;
+  max-width:50%;
   padding-top: 0;
   padding-left: 4%;
   padding-right: 4%;
   padding-bottom: 4%;
+  overflow-y: hidden;
+  height: 70%;
 }
 
 #recap-container{
@@ -1103,12 +1100,109 @@ Slanted Banner*/
 
 }
 
-
+/*Mobile screen*/
 @media (max-width: 520px){
   .navbar h2{
     font-size: 3.7vw;
   }
+  #home-page-container{
+    flex-direction: column;
+  }
+  .row-container  :nth-child(2) {order: -1;}
+  .column-container :nth-child(2) {order: 0;}
+  #bitclublogo{
+    max-width: 90%;
+  }
+  #middleDiv{
+    padding-top: 0;
+  }
+  #nextEventHeader{
+    font-size: 8vw;
+  }
+  .slider-wrapper{
+    max-width: 90vw;
+  }
+  #register-button {
+    margin-top: 4vw
+  }
+  #register-button button{
+    font-size: 5vw;
+  }
+  .left-slanted-light-grey-banner{
+    width: 100%;
+    transform: translateX(-50%) skewX(-40deg)
+  }
+  .left-slanted-light-grey-banner h1{
+    font-size: 5vw;
+    transform: translateX(10%) skewX(40deg)
+  }
+  .left-slanted-light-grey-banner h2{
+    font-size: 3.5vw;
+  }
+  .right-slanted-light-grey-banner {
+    width: 100%;
+    transform: translateX(40%) skewX(40deg)
+  }
+  .right-slanted-light-grey-banner h1{
+    font-size: 5vw;
+    transform: translateX(-10%) skewX(-40deg)
+  }
+  .home-page-image-container{
+    width: auto
+  }
+  .description-box{
+    width:auto;
+    padding: 5px;
+    font-size: 3vw;
+    font-weight: 600;
+  }
+
+  #rightDiv{
+    padding-left: 10%;
+    padding-right: 10%;
+    transform: translateX(0px)
+  }
+  #leftDiv{
+    padding-left: 10%;
+    padding-right: 10%;
+    transform: translateX(0px)
+  }
+
+  /*about page changes*/
+  #about-description{
+    margin: 0
+  }
+
+  /*Events page changes*/
+  #event-container-1 :nth-child(2) {order: 0;}
+  #event-container-1{
+    flex-direction: column;
+  }
+  #recap-banner{
+    width: 60vw
+  }
+  .event-list button{
+    font-size: 3vw;
+    width: 40vw;
+  }
+  .event-list h1{
+    font-size: 4vw;
+  }
+  #events-label{
+    font-size: 6.5vw;
+    transform: translateX(0px)
+  }
+  .large-header{
+    font-size: 4.5vw;
+  }
+  .fit-description{
+    font-size: 3.5vw;
+    width: 70vw
+  }
+
 }
+
+
 
 
 @media (hover :hover){

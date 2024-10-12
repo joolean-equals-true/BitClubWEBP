@@ -44,7 +44,7 @@ function scrollIntoViewCall(targetElement){
   <title>Home</title>
 
 
-<div class = "row-container">
+<div id="home-page-container" class = "row-container">
 
 <div id  = "rightDiv" class = "column-container justify-start">
   <ul class = "left-slanted-light-grey-banner"> 
@@ -73,18 +73,19 @@ function scrollIntoViewCall(targetElement){
     </h1>
 
     <section class = "carousel-container center">
-        <div class = "slider-wrapper">
+        <div class = "slider-wrapper drop-shadow">
             <div class = "slider">
               <img id = 'event-img-1' :src = "eventImg">
               <img id = 'event-img-2' :src = "eventImg2">
               <img id = 'event-img-3' :src = "eventImg3">
             </div>
-            <div class ="left-option">
-             <a class = "arrow-left" @click = "changeImage(0)"></a>
-            </div>
-            <div class = "right-option">
-             <a class = "arrow-right right-option" @click = "changeImage(1)"></a>
-            </div>
+            <svg class = "arrow-left"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(0)">
+              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+            <svg class = "arrow-right"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(1)">
+              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+              
         </div>
     </section>
     
