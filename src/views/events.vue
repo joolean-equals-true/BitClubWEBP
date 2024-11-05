@@ -18,7 +18,6 @@ let pos = 0;
 window.onclick = function(event) {
     let events = document.getElementsByClassName("modal");
     for(var i = 0; i < events.length; i++){
-        console.log(events.item(i))
             if(event.target == events.item(i)){
                 events.item(i).style.top = "-1800px";
                     setTimeout(function() {
@@ -29,12 +28,15 @@ window.onclick = function(event) {
     }
 }
 function changeImage(direction){
-  if(direction == 1 && pos < recapImgs.length){
+   console.log(pos)
+  if(direction == 1 && pos+1 < recapImgs.length){
     pos++;
   }
-  else if (pos >0){
+  else if (direction == 0 && pos >0){
     pos--;
   }
+  console.log(pos)
+  console.log(recapImgs.at(pos))
   scrollIntoViewCall(recapImgs.at(pos))
 }
 
@@ -410,19 +412,12 @@ function scrollIntoViewCall(targetElement){
     <div id="recap-modal"  class = "modal">
         <div id ="recap-content" class = "modal-content center">
             <div class = "column-content large-header">
-                <h1 class = "orbitron-font">Recap</h1>
+                <h1 id = "recap-header" class = "orbitron-font">Recap</h1>
                 <section  id = "recap-container"class = "carousel-container center">
-                    <div class = "slider-wrapper">
+                    <div id = "recap-wrapper" class = "slider-wrapper">
                         <div class = "slider">
                             <img id = 'recap-img-1' :src = "recapImg1">
-                            <img id = 'recap-img-2' :src = "recapImg2">
                         </div>
-                        <svg class = "arrow-left"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(0)">
-                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
-                        </svg>
-                        <svg class = "arrow-right"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" @click = "changeImage(1)">
-                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
-                        </svg>
                     </div>
                 </section>
                 <p class = "orbitron-font recap-paragraph center">

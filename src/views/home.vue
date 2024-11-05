@@ -11,10 +11,10 @@ let pos = 0;
 let eventImgs = ["event-img-1", "event-img-2", "event-img-3"]
 
 function changeImage(direction){
-  if(direction == 1 && pos < eventImgs.length){
+  if(direction == 1 && pos+1 < eventImgs.length){
     pos++;
   }
-  else if (pos >0){
+  else if (direction == 0 && pos >0){
     pos--;
   }
   scrollIntoViewCall(eventImgs.at(pos))
@@ -72,7 +72,7 @@ function scrollIntoViewCall(targetElement){
       Next Event
     </h1>
 
-    <section class = "carousel-container center">
+    <section class = "center">
         <div class = "slider-wrapper drop-shadow">
             <div class = "slider">
               <img id = 'event-img-1' :src = "eventImg">

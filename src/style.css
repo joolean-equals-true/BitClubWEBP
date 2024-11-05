@@ -227,9 +227,6 @@ this adds a drop shadow (that I am comforable with to the element*/
 
 /*carousel-container*/
 /*this container is meant to hold a multitude of images.*/
-.carousel-container{
-
-}
 
 .slider-wrapper{
   position: relative;
@@ -660,9 +657,10 @@ page right now. */
   border-radius: 30px;
   border-color: azure;
   max-width: 80vw;
-  max-height: 70%;
+
   overflow-y: auto;
   justify-items: left;
+  justify-content: space-evenly;
 
 }
 .modal-box{
@@ -691,6 +689,7 @@ page right now. */
 .modal-paragraph{
   font-size: 1.5vw;
   text-align: center;
+  padding: 0;
 }
 .close-text{
   padding: 0;
@@ -698,7 +697,6 @@ page right now. */
 }
 .event-graphic{
   aspect-ratio: 2/2;
-  display: flex;
 }
 .event-content{
   flex: 1 1 100%;
@@ -756,7 +754,6 @@ page right now. */
   max-width: 50%;
 
 }
-
 
 /*ID's---------------------------------*/
 
@@ -894,6 +891,15 @@ to reposition it in the right place.*/
   transition: 0.5s;
 }
 
+#recap-header{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+#recap-wrapper{
+  max-width: 80%;
+}
+
 
 
 #event-container-1{
@@ -908,8 +914,8 @@ to reposition it in the right place.*/
 #recap-button{
   margin-top: 0;
   margin-bottom: 0;
-  
 }
+
 
 /*Event Graphics*/
 #kickOffGraphic{
@@ -932,11 +938,11 @@ to reposition it in the right place.*/
 #recap-content{
   max-width:50%;
   padding-top: 0;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-bottom: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
   overflow-y: hidden;
-  height: 70%;
+  max-height: fit-content;
 }
 
 #recap-container{
@@ -1007,24 +1013,52 @@ Slanted Banner*/
   #bitclublogo{
     max-width: 85%;
   }
- 
 
-
-}
-
-  @media (max-width: 1000px){
-
-    .modal-content{
-      width: 80vw;
-    }
-    .event-graphic{
-      max-width: 40vw;
-    }
-    .modal-paragraph{
-      font-size: 2vw;
-    }
+  .recap-paragraph{
+    font-size: 2vw;
   }
 
+#recap-content{
+  max-width: 80%;
+}
+
+#officer-header{
+  font-size: 8vw;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.officer-label{
+  font-size: 4vw;
+}
+.officer-image{
+
+}
+.fact-container{
+  width: 25vw;
+}
+
+.officer-professor{
+  max-width: 23vw;
+}
+
+.fact-container h2{
+  font-size: 2.5vw;
+}
+.fact-container h3{
+  font-size: 2.4vw;
+}
+.officer-image{
+  max-width: 30vw;
+}
+.fact-text{
+  font-size: 1.8vw;
+}
+.officer-description{
+  font-size: 3vw;
+}
+
+}
 @media (max-width: 890px){
   /*this is for the next event banner on the events page.*/
   #next-event-button{
@@ -1081,12 +1115,44 @@ Slanted Banner*/
   .modal-paragraph{
     font-size: 2vw;
   }
-  .event-graphic{
-    max-width: 35vw
+
+  .modal-content{
+    max-width: 95vw;
   }
 
 }
 
+@media (max-width: 695px){
+  .modal-content{
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    padding-bottom: 1rem;
+    max-height: 70%;
+  }
+  .modal-button{
+    font-size: 3vw
+  }
+  .modal-box{
+    padding: 0;
+  }
+  .modal-paragraph{
+    font-size:2.5vw;
+    margin: 10px;
+  }
+  .event-content{
+    max-width: 60vw;
+    
+  }
+  .event-graphic{
+    width: fit-content;
+  }
+  .modal-button{
+    font-size: 4vw;
+  }
+
+}
 
 @media (max-width: 680px){
   .navbar li{
@@ -1199,6 +1265,59 @@ Slanted Banner*/
     font-size: 3.5vw;
     width: 70vw
   }
+  .modal-content{
+   padding-bottom: 1rem;
+   max-height: fit-content;
+   max-height: 80%;
+  }
+  .modal-paragraph{
+    font-size:3.5vw;
+    margin: 10px;
+  }
+  .event-content{
+    max-width: 80vw;
+    
+  }
+
+
+  #recap-wrapper{
+    max-width: 95%;
+  }
+  .recap-paragraph{
+    font-size: 3.4vw;
+    padding: 0;
+    max-width: 80%;
+    text-align: left;
+  }
+
+#recap-content{
+  max-width: 92%;
+}
+
+
+.officer-professor{
+  max-width: 23vw;
+}
+
+.fact-container h2{
+  font-size: 3.9vw;
+}
+.fact-container h3{
+  font-size: 3.8vw;
+}
+.officer-image{
+  max-width: 35vw;
+}
+.fact-text{
+  font-size: 2.5vw;
+}
+.officer-container{
+  padding: 0;
+}
+.officer-label{
+  font-size: 4.4vw;
+}
+ 
 
 }
 

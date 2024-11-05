@@ -28,25 +28,6 @@ function scrollIntoViewCall(targetElement){
 <template>
     <title>Officers</title>
 
-    <ul class = "officer-navbar">
-        <h3 id = "number1"@click = "scrollIntoViewCall('president-label')">
-                  1
-        </h3>
-        <h3  @click = "scrollIntoViewCall('vp-label')">
-            2
-        </h3>
-        <h3 @click = "scrollIntoViewCall('secretary-label')">
-            3
-        </h3>
-        <h3 @click = "scrollIntoViewCall('chaplain-label')">
-            4
-        </h3>
-        <h3 id= "number5"@click = "scrollIntoViewCall('social-media-manager-label')">
-            5
-        </h3>
-    </ul>
-
-
 
 
 <div class = "column-container">
